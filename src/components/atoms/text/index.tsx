@@ -9,7 +9,7 @@ type MyProps = { variant: any; text: string; height: string; width?: string };
 const Text = (props: MyProps) => {
   const styles = {
     fontSize: props.height,
-    // width: props.width,
+    width: props.width,
   };
   return (
     <ThemeProvider theme={typographyAtomStyles}>

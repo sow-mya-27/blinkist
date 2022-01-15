@@ -1,13 +1,13 @@
 import React from "react";
 import IconButton from "@material-ui/core/IconButton";
 
-type MyProps = { src: React.ReactNode; height: string; width: string };
+type MyProps = { src: string; height: string; width: string };
 const Icons = (props: MyProps) => {
   const styles = {
     height: props.height,
     width: props.width,
   };
   console.log(props.height);
-  return <IconButton style={styles}>{props.src}</IconButton>;
+  return <img src={props.src} height={props.height} width={props.width} />;
 };
 export default Icons;

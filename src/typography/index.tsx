@@ -1,6 +1,15 @@
+import { blueGrey } from "@material-ui/core/colors";
 import { createTheme } from "@mui/material/styles";
-
 const typographyAtomStyles = createTheme({
+  palette: {
+    primary: {
+      main: "#69A6E3",
+    },
+    secondary: {
+      main: "#03314B",
+    },
+  },
+
   typography: {
     h1: {
       fontFamily: "Cera Pro",
@@ -20,26 +29,16 @@ const typographyAtomStyles = createTheme({
 
     body1: {
       fontFamily: "Cera Pro",
-      fontWeight: 500,
-      fontStyle: "normal",
+      // fontWeight: 700,
       fontSize: "16px",
       lineHeight: "20.11px",
       display: "inline",
       width: "100px",
-
-      //   display: "inline",
-      //   width: "78px",
-      //   height: "20px",
-      //   fontStyle: "normal",
-      //   fontWeight: 500,
-      //   fontSize: "16px",
-      //   lineHeight: "20px",
-      //   color: "#03314B",
     },
     subtitle1: {
       fontFamily: "Cera Pro",
       fontWeight: 700,
-      fontStyle: "normal",
+      fontStyle: "medium",
       fontSize: "18px",
       verticalAlign: "top",
       textAlign: "left",
@@ -48,7 +47,26 @@ const typographyAtomStyles = createTheme({
       //   height: "18px",
 
       lineHeight: "22.63px",
-      color: "#22C870",
+      // color: "#22C870",
+    },
+    subtitle2: {
+      fontFamily: "Cera Pro",
+      fontWeight: 500,
+      fontStyle: "medium",
+      fontSize: "24px",
+      verticalAlign: "top",
+      textAlign: "left",
+      display: "inline",
+      width: "378px",
+      //   height: "18px",
+
+      lineHeight: "32px",
+    },
+    body2: {
+      fontFamily: "Cera Pro",
+      fontStyle: "Regular",
+      fontSize: "16px",
+      color: "#6D787E",
     },
   },
 });

@@ -11,7 +11,7 @@ const Template: ComponentStory<typeof Icons> = (args) => <Icons {...args} />;
 
 export const images = Template.bind({});
 images.args = {
-  src: <Search></Search>,
-  height: "20.31px",
-  width: "20.31px",
+  src: "https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png",
+  height: "12px",
+  width: "10.61px",
 };
