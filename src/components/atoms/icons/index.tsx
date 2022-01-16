@@ -7,7 +7,6 @@ const Icons = (props: MyProps) => {
     height: props.height,
     width: props.width,
   };
-  console.log(props.height);
   return <img src={props.src} height={props.height} width={props.width} />;
 };
 export default Icons;

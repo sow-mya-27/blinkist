@@ -34,6 +34,7 @@ const typographyAtomStyles = createTheme({
       lineHeight: "20.11px",
       display: "inline",
       width: "100px",
+      textTransform: "capitalize",
     },
     subtitle1: {
       fontFamily: "Cera Pro",
