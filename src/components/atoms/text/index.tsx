@@ -5,11 +5,12 @@ import { typographyAtomStyles } from "../../../typography";
 import { makeStyles } from "@mui/material";
 import { style } from "@mui/system";
 
-type MyProps = { variant: any; text: string; height: string; width?: string };
+type MyProps = { variant: any; text: string; height: string; width?: string ;color?:string};
 const Text = (props: MyProps) => {
   const styles = {
     fontSize: props.height,
     width: props.width,
+    color:props.color
   };
   return (
     <ThemeProvider theme={typographyAtomStyles}>

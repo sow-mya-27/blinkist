@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import { makeStyles, ThemeProvider } from "@material-ui/core";
 import { Fab } from "@material-ui/core";
 import { typographyAtomStyles } from "../../../typography";
+import HeaderPopUp from "../headerPopup";
 const Header = () => {
   const [click, setClick] = useState(false);
   const useStyles = makeStyles({
@@ -15,14 +16,23 @@ const Header = () => {
       justifyContent: "space-around",
       height: "86px",
       alignItems: "center",
+      position:"relative",
+      width:"1440px",
     },
     innerdiv: {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      width: "422px",
-      marginLeft: "0px",
+      marginLeft: "0px",   
+      
+      width:"591px"
+
     },
+
+  main:{
+    display:"flex",
+    flexDirection:"column",
+  }
   });
   const classes = useStyles();
   const icon1 = (
@@ -41,7 +51,11 @@ const Header = () => {
       width={"10px"}
     ></Icons>
   );
+  if(click){
+    const comp=<HeaderPopUp/>
+  }
   return (
+  <div className={classes.main}>
     <div className={classes.root}>
       <div className={classes.innerdiv}>
         <Image
@@ -61,7 +75,7 @@ const Header = () => {
               }}
               startIcon={click ? icon2 : icon1}
             >
-              <div style={{ color: "black", fontFamily: "Cera Pro" }}>
+              <div style={{ color: "black" }}>
                 <Text variant={"body1"} text={"explore"} height={"16px"}></Text>
               </div>
             </Button>
@@ -85,7 +99,8 @@ const Header = () => {
           ></Icons>
         </div>
       </ThemeProvider>
-    </div>
+      
+    </div> {click ? <HeaderPopUp/>: <div></div>}</div>
   );
 };
 export default Header;

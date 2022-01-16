@@ -1,14 +1,12 @@
-import { Typography } from "@material-ui/core";
 import React from "react";
-import { typographyAtomStyles } from "../../../typography";
-import { ThemeProvider } from "@material-ui/core";
 import { makeStyles, createStyles } from "@mui/styles";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import LinearProgress from "@mui/material/LinearProgress";
+import Text from "../../atoms/text/index"
 type MyProps = {
   bookName: string;
-  authorName: String;
+  authorName: string;
   src: string;
   time: string;
   read?: string;
@@ -33,6 +31,7 @@ const useStyles = makeStyles({
     height: "18px",
     paddingTop: "17px",
     color: "#6D787E",
+    display:"flex"
   },
   root: {
     border: "1px  solid",
@@ -47,43 +46,19 @@ const Card = (props: MyProps) => {
   return (
     <div className={classes.root}>
       <img src={props.src}></img>
-      <ThemeProvider theme={typographyAtomStyles}>
-        <Typography variant="subtitle1">
-          <div className={classes.book}>{props.bookName}</div>
-        </Typography>
-        <Typography variant="body1">
-          <div className={classes.author}>{props.authorName}</div>
-        </Typography>
-        <Typography variant="caption">
-          <div className={classes.time}>
+        <div className={classes.book}>
+        <Text variant="subtitle1" text={props.bookName} height={"16px"} color="#03314B"/></div>
+        <div className={classes.author}><Text variant="body1" text={props.authorName} height={"16px"}/></div>
+        <div className={classes.time}>
             <AccessTimeIcon
               sx={{ paddingLeft: "17.67px", height: "16px", width: "16px" }}
             />
-            {props.time} {props.read}
+            <Text variant=""  text={props.time} height={"16px"}/> {props.read}
           </div>
-        </Typography>
         <MoreHorizIcon
           sx={{ paddingLeft: "247px", color: "#042330" }}
         ></MoreHorizIcon>
-        <div
-          style={{ display: "flex", paddingTop: "28px", marginBottom: "0px" }}
-        >
-          <div
-            style={{
-              backgroundColor: "#E1ECFC",
-              height: "15px",
-              width: "88px",
-            }}
-          ></div>
-          <div
-            style={{
-              backgroundColor: "#F1F6F4",
-              height: "15px",
-              width: "195px",
-            }}
-          ></div>
-        </div>
-      </ThemeProvider>
+        
     </div>
   );
 };

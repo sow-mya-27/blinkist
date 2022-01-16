@@ -6,12 +6,16 @@ const Footer = () => {
   const useStyles = makeStyles({
     flex: {
       display: "flex",
-      justifyContent: "space-around",
+      justifyContent: "space-around"  ,
+      // alignContent: "flex-start",
+      alignItems:"center",
+      paddingLeft:"140px"    
     },
     body: {
-      backgroundColor: "#F1F6F4",
-      height: "300px",
+      // backgroundColor: "#F1F6F4",
+      height: "370px",
       width: "1440px",
+      paddingTop:"38px", 
     },
     body1: {
       color: "solid black",
@@ -20,7 +24,7 @@ const Footer = () => {
     },
     gamma: {
       paddingTop: "48px",
-      paddingLeft: "80px",
+      paddingLeft: "200px",
       color: "#6D787E",
     },
   });
@@ -38,7 +42,7 @@ const Footer = () => {
             <Text
               //   variant="subtit  le1"
               text={"Big ideas in small packages Start learning now"}
-              height={"32px"}
+              height={"24px"}
               width="378px"
               variant={"subtitle2"}
             ></Text>
@@ -109,7 +113,9 @@ const Footer = () => {
               height={"16px"}
             ></Text>
           </div>
+          
         </div>
+        
       </div>
       <div className={classes.gamma}>
         <Text

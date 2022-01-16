@@ -44,7 +44,6 @@ const typographyAtomStyles = createTheme({
       verticalAlign: "top",
       textAlign: "left",
       display: "inline",
-      width: "96px",
       //   height: "18px",
 
       lineHeight: "22.63px",
@@ -67,7 +66,9 @@ const typographyAtomStyles = createTheme({
       fontFamily: "Cera Pro",
       fontStyle: "Regular",
       fontSize: "16px",
+      fontWeight:400,
       color: "#6D787E",
+      textTransform: "capitalize",
     },
   },
 });
