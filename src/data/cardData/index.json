@@ -1,0 +1,74 @@
+[
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/7a8d/2547/2a61cffee838cf588c90ce1fcfaedae7?Expires=1642982400&Signature=YIGs8Fdj2wndO~2CKQe-Z4G1EtbtJTkgzVwM1h~vVEFGWlAMBMkPOec6hYoq943tXF7xIR0-nmBZi6JQeBMtTuQA5vftNwbewAqEm4vlaZFI4emPmrzsEUAONAMOW5rQQ~Pmo5SuD0rpBtCyCCKIZGqKRO1ae1NVAjh~vt2~R~2Gd8FB79c73A6kOCmHkPyTl7bVIv0tfqxZbczcYU1PFzWE5p-XG9NZK7lg99EAYuk8hyN8eskVSGLcQjeLh1qMMupFtZ44iNfBxo2cUIbPcw1BjUx4c-gXzZ5l3f6~fNuqTDxYqFObYFiKb~9WvTGxBiO4PzLiMXnCx2CfX0fwQA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "Bring Your Human to Work",
+    "author-name": "Erica Keswin",
+    "time-stamp": "13-minute read",
+    "id": 1,
+    "reads": false
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/3e9a/001d/986c218c11bd0e5acb50c36d5e3ce117?Expires=1642982400&Signature=IXyWLGYOD6VDzII8kXrRRkeyaIUsaFDVMeI2~8ANIZFNEP4cwoSXO1TiaggDeVs2fkyKGbJX~utagkOfqvxBPo2imkGnTYLDjBizhaxawRstP4NyLoSPJyiw~bTmbNMS-gy~Sb44nkwzpUxGYMDP7KiOoyi5c2H1NsWTn4Ab7WxusEwDmqPe7qfrtRUW~6EJKZtzwZ-xkb2m~JIL0e8B9EnBYzkB7n~FoajMqPNCeTXW0e9W6L3zfP2RfRKxriWPXYtOu-E~Tm3-5xg26WQVLwdwmIYjKVT9tpTB-DuvywKGoTAK7QztwqN0QBdCtvJytbIYEgJ~8vVGE~OBu0Z6Pg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "Employee to Entrepreneur",
+    "author-name": "Steve Glaveski",
+    "time-stamp": "15-minute read",
+    "id": 2,
+    "reads": false
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/076f/7bd2/672e13400982c462d295d772e14f20a8?Expires=1642982400&Signature=BXR8mXK3wXSSAJHQXHGGsjPSzyTYxRc6K7Ixjv3OJhJf0tce8U8~EpbtpClvubGa1md9DUyMn9Xi5gYQvRKFN~tL1bF2MSvz2kgHiQ2dCkzJQSzEBkMYXSJvM4z8t6JXwiWuaRbIbM4faDT9J0nLPD0YnPH-5v-QO8mIobyVtfgOQDsdPHx6o6r0TKUujoa3b1ktSs6tEVwRwdGt68W5MsCsxTZ-~E6fGsIfogjMZ8DbCaFFFokrHuOl4gWMWHAPZrjO~9~DfxyKL-CcXXyIa367NBuxCbNAbGCmH74UfjeoEKf9zZl6fmnoanle1fmuAggt~UC~KJfLw~VUsGutOg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "Doesn’t Hurt to Ask",
+    "author-name": "Trey Gowdy",
+    "time-stamp": "13-minute read",
+    "id": 3,
+    "reads": true
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/a029/7cf3/8283a77df75b8b9996b5539a7e94c40c?Expires=1642982400&Signature=hMuRxntZbcP0SSafkyVRfTi7jjt0p5dknXLeeMM7sF6yMe2GqP~1XOSjpG74-bwEaFWpDJP8kanRWONJxNGhz4PEd2IevW1nR7BKwY~crDamGrl7sS2cbSWrykQTYnsXpigNeaY9cK5PY81YERnQRBOWTny4Ta1dS-7her71OmLT~kxxJXzl1XqsdnhGI3yBWz0M6naI3~M2~DRnvZvoeZ4z1Q8iMkj0whBm6uCjJhfjTUNWP8zPXqbGK8ppgyfb-XS95GA2tmArf0Vrm-a26BOr48FcBggnTXwDLMpX~lzarATzx-hzH4MZiBVIQU-9xqTQJk1Gk8tAmO62MmI17g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "The Fate of Food",
+    "author-name": "Amanda Little",
+    "time-stamp": "12-minute read",
+    "id": 4,
+    "reads": true
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/6c72/6047/7882428f1a8f3edfd789a93af55c0906?Expires=1642982400&Signature=DPmvnM9rgUuOKZoo3SVvaw2aHkhD~yQ5mY~xZQHOfQDUYXu-AKKeB4Km-s-a-nnJ-u-gYdl-V3UVSQEgbAreYlJFjzKloG0B~2IjwRpH2-rDcrRMv60bT7AWT0fg8x4ydheznNzSDf2Arou0LRNMcjFsPxg012rr4EJpK4IqmIskjoF1VUY6nEpVReSajvmBlx5PQnrVv-R21rQHYfaoJ0s6lFbcShsRrpU7N4qsLHJSmzCGrbMPU5VLQzgZd0ZSFURJejyV09c5ibh8z7avxN6ZXxtElxonn8tcTzDcXv9izx70s25J~vnZZw9Oa1bg4VcOmq9w~yxnRG3sq581Sw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "Lives of the Stoics",
+    "author-name": "Ryan Holiday, Stephen Hansel",
+    "time-stamp": "13-minute read",
+    "id": 5,
+    "reads": false
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/f789/7b02/2da4a7f458cc476fb504b5ec892de6bf?Expires=1642982400&Signature=FscigmziL127YujsHHkmQCTPxlpNCbKOFXmiZgHpR7G13-MAu9dLj8ZIEstHociuMkDGxlugR7mX~HeexdZ1dVJZFMIXTPiS3yql-uPxAGpBszQLpIiwqYY7iL1RwNZwRTckNDHikDSAu89Lpa~Y2AAUVxQOE9ZK8ADlDm8ECXOQqBbs8dyRDUheEr6KgH2MMDfxMLHwBfb9iSkohd-NJdFiLse7DJWwoSzxvs8FkO9EAcYv9zfIDFc8x2uXQzcVj6wuNuVa8YEIfEJq55JhE~UBJV5-3J7sHDofCAhUpu6XeM0cwq8UW6PpPPTePxSRIAhSjvW-7zzg5abUK5RY8g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "Loving Your Business",
+    "author-name": "Debbie King",
+    "time-stamp": "13-minute read",
+    "id": 6,
+    "reads": false
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/79e2/7cec/04adb2cb7e21de32e3cb65a829e1011d?Expires=1642982400&Signature=GD440vBc~dqbqhVMb72thXhCPAG8jtCUvyFwlkUOjXTWc0oZCiPM7QnYbur6OUONZ9T8JZEjsIAWh9CvqAWNmgHdR38XF-5P0cGL2~eyBcwfSB4yUV8o4RIEzWQVQjeo~YqRZ9JKsyysZ4RSaQBFIgK1mrt-hLZH48KOgnrPJtvM6FGwP38vb3TxmrsIYOS6NWiO46XJCUrBIT4Ea-bh9HUHKhNYBv0pybIeIGVkuXysh~UlklYqukgQ~h4gMORisT5Rms9jUG6HMiwueBgquDMc0EYcQDpRUfy9cgOJCbe6MaSnfQ2Xwk01xGuogj5n18HWBi~XEuAuh72tKyQeFw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "The Lonely Century",
+    "author-name": "Noreena Hertz",
+    "time-stamp": "15-minute read",
+    "id": 7,
+    "reads": false
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/a8fa/012a/eea7424ebbc307ee55ae23ab1b355ce2?Expires=1642982400&Signature=K81nExNfpyTH74lrMC2PYm0HVVgvu4xZC5bZ4D0OVijZUhs9uzEUlEO7TFkYSUoBjYFHQJOp9JSk6siAC6z4SltottVhh3f7ls4xLVna6-mhXaIzqU9Lq~IEswO6B4ZHYQf7CZhmTrhtdYh6Ih9I-qldaMINS4mndLYCLPfKc7DsTxrMvJnGCnoW0bTA85jap5h~nujIvs~xzUvz4-1eHs2iNf-cVbRh~COJlDHvgFpHVDFbDCdHvc7B9uQo36YxEQrIRpyQO4SB03izOEFjEANhM7rUciC3Jo6T~UKJoC0toMTrgBP8rENhXilymhP4nzZdWr7f2qpxphO9NTt07Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "Eat Better, Feel Better",
+    "author-name": "Giada De Laurentiis",
+    "time-stamp": "13-minute read",
+    "id": 8,
+    "reads": true
+  },
+  {
+    "src": "https://s3-alpha-sig.figma.com/img/643d/d789/e66ced625e5439bacbcbe2128c0f2303?Expires=1642982400&Signature=NIzgY7MxV7Lo3ukq-mnrPnLZ7ChtdW4-5~nkOBvZajYrMyIERh~VHCCznCXmYsI-QYYgMsqlq3CbKQ7s9rielblHeVMbi7rrg1jlU18EQ3LxzF768GUjqtSx3xJfMPk8XphPJe8vOZZC9Cz8w5MoMAzcLAd70LqabR3Grzuev666ut7KBqPLrA-besoKUNZyb-PZOBe1~cumjWJjds1RfqiJ4e3Q0A3GYTmY7xDl7kZSglrLdHoaos1gYUS29rnlbmZnSYYBZ1UqP-Vm08p2W30YYDz9kdIKMUam9v55MXWbyYdB3qkfoYqog0QEevNRAlCOnNtkteqkDXP1LHZZmg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "card-name": "Dropshipping",
+    "author-name": "James Moore",
+    "time-stamp": "12-minute read",
+    "id": 9,
+    "reads": false
+  }
+]
