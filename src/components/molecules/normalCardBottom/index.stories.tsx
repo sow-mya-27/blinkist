@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Normal from ".";
 export default {
-  title: "atoms / nonHoverLib",
+  title: "molecules / nonHoverLib",
   component: Normal,
 };
 const Template: ComponentStory<typeof Normal> = (args) => <Normal />;

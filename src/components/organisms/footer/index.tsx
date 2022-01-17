@@ -6,16 +6,16 @@ const Footer = () => {
   const useStyles = makeStyles({
     flex: {
       display: "flex",
-      justifyContent: "space-around"  ,
-      // alignContent: "flex-start",
-      alignItems:"center",
-      paddingLeft:"140px"    
+      justifyContent: "space-around",
+      alignContent: "flex-start",
+      alignItems: "center",
+      paddingLeft: "140px",
     },
     body: {
-      // backgroundColor: "#F1F6F4",
+      backgroundColor: "#F1F6F4",
       height: "370px",
       width: "1440px",
-      paddingTop:"38px", 
+      paddingTop: "38px",
     },
     body1: {
       color: "solid black",
@@ -113,9 +113,7 @@ const Footer = () => {
               height={"16px"}
             ></Text>
           </div>
-          
         </div>
-        
       </div>
       <div className={classes.gamma}>
         <Text

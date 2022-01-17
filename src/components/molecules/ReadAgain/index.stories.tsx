@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import ReadAgain from ".";
 export default {
-  title: "atoms / nonHoverLib",
+  title: "molecules / nonHoverLib",
   component: ReadAgain,
 };
 const Template: ComponentStory<typeof ReadAgain> = (args) => <ReadAgain />;

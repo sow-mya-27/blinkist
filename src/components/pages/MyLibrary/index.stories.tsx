@@ -1,8 +1,8 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory } from "@storybook/react";
 import MyLibrary from ".";
 export default {
-  title: "atoms / MyLibrary",
+  title: "pages / MyLibrary",
   component: MyLibrary,
 };
 const Template: ComponentStory<typeof MyLibrary> = (args) => <MyLibrary />;
