@@ -8,8 +8,8 @@ const Footer = () => {
       display: "flex",
       justifyContent: "space-around",
       alignContent: "flex-start",
-      alignItems: "center",
-      paddingLeft: "140px",
+      paddingLeft: "220px",
+      paddingRight:"190px"
     },
     body: {
       backgroundColor: "#F1F6F4",
@@ -27,9 +27,12 @@ const Footer = () => {
       paddingLeft: "200px",
       color: "#6D787E",
     },
+    parent:{display:"flex",justifyContent:"center"}
+
   });
   const classes = useStyles();
   return (
+    <div className={classes.parent}>
     <div className={classes.body}>
       <div className={classes.flex}>
         <div>
@@ -41,9 +44,16 @@ const Footer = () => {
           <div style={{ color: "#0365F2", fontWeight: 500 }}>
             <Text
               //   variant="subtit  le1"
-              text={"Big ideas in small packages Start learning now"}
+              text={"Big ideas in small packages "}
               height={"24px"}
-              width="378px"
+              variant={"subtitle2"}
+            ></Text>
+          </div>
+          <div style={{ color: "#0365F2", fontWeight: 500 }}>
+            <Text
+              //   variant="subtit  le1"
+              text={" Start learning now"}
+              height={"24px"}
               variant={"subtitle2"}
             ></Text>
           </div>
@@ -124,6 +134,7 @@ const Footer = () => {
           height={"14px"}
         ></Text>
       </div>
+    </div>
     </div>
   );
 };

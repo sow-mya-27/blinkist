@@ -42,10 +42,11 @@ const HeaderPopUp = () => {
       justifyContent: "space-evenly",
       alignItems: "flex-start",
       height: "304px",
-    },
+    },parent:{display:"flex",justifyContent:"center"}
   });
   const classes = useStyles();
   return (
+    <div className={classes.parent}>
     <div className={classes.root}>
       <div className={classes.flex}>
         <Text
@@ -69,12 +70,12 @@ const HeaderPopUp = () => {
           width={"188px"}
           color="#6D787E"
         ></Text>
-        <Text
+        {/* <Text
           variant={"body1"}
           text={" "}
           height={"16px"}
           width={"188px"}
-        ></Text>
+        ></Text> */}
       </div>
       <br />
       <hr
@@ -224,6 +225,7 @@ const HeaderPopUp = () => {
           </Button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

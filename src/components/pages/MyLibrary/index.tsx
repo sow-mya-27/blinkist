@@ -1,15 +1,16 @@
 import React from "react";
 import Footer from "../../organisms/footer";
 import Header from "../../organisms/header";
+import JsonSample from "../../organisms/jsonSample";
 import MyLibraryTemplate from "../../organisms/myLibrary";
 import HomePageTemplate from "../../templates/HomePage";
 
 const MyLibrary = () => {
   return (
-    <div>
+    <div >
       <HomePageTemplate
         header={<Header></Header>}
-        body={<MyLibraryTemplate></MyLibraryTemplate>}
+        body={<JsonSample></JsonSample>}
         footer={<Footer></Footer>}
       />
     </div>

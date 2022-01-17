@@ -6,12 +6,14 @@ import Box from "@mui/material/Box";
 import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  root: {},
+  root: {width:"920px"},
+  parent:{display:"flex",justifyContent:"center"}
 });
 
 const MyLibraryTemplate = () => {
   const classes = useStyles();
   return (
+    <div className={classes.parent}>
     <div className={classes.root}>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
@@ -30,7 +32,7 @@ const MyLibraryTemplate = () => {
           ))}
         </Grid>
       </Box>
-    </div>
+    </div></div>
   );
 };
 export default MyLibraryTemplate;

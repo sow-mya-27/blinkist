@@ -137,11 +137,12 @@ const Header = () => {
       justifyContent: "space-between",
       alignItems: "center",
       width: "591px",
-    },
+    },parent:{display:"flex",justifyContent:"center",paddingLeft:"100px"}
   });
   const classes = useStyles();
   return (
     <div>
+    <div className={classes.parent}>
       <div className={classes.root}>
         <div className={classes.innerDiv}>
           <Image
@@ -181,8 +182,11 @@ const Header = () => {
           ></Icons>
         </div>
       </div>
-      {click ? <HeaderPopup /> : <div></div>}
+          </div>
+          {click ? <HeaderPopup /> : <div></div>}
+
     </div>
+    
   );
 };
 export default Header;

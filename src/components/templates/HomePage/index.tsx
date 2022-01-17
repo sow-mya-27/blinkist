@@ -19,6 +19,7 @@ const useStyles = makeStyles({
     marginTop: "86px",
     height: "100%",
     width: "100%",
+
   },
 });
 type MyProps = {

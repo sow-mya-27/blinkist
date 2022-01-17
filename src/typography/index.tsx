@@ -45,7 +45,7 @@ const typographyAtomStyles = createTheme({
       textAlign: "left",
       display: "inline",
       //   height: "18px",
-
+      textTransform: "capitalize",
       lineHeight: "22.63px",
       // color: "#22C870",
     },
