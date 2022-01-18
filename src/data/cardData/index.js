@@ -89,4 +89,14 @@ export const Data = [
     reads: "",
     status: true,
   },
+  {
+    src: "https://s3-alpha-sig.figma.com/img/d6ff/11bb/88b0e65d07ed5e88976fd6ef79c2890d?Expires=1643587200&Signature=BoUWxYui6ZV0fIjTDw1YEfMLmrL-Ll5loq08p9DNVyC8TR7IoS8hTaZdId2qpmgtvVpsb36~sU33JaWVKhmNV4CsrxTy2-MRtEO~wjV4lBzsE353fGMM8lYjsub2dR0YPp6EKBDnkhCl6a6Zka~btq~7nplZh9P7SqmP4s~KjNyHftRC~tOsfQiTLHHJck2r1i03QZMmc4STpabkgy4ubt29YHQ5x2J1ik6knr5djNwXqc6GgjPw6ynXWpVUX5~uz-1GqwvC98n2adilikhEW3gbpcBeArILY~V~zjbdTivTegMC8GX28aMZp1z7QvF3P~aMikDoFWLg6SJ7zrK2mg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    cardName: "Being Boss",
+    authorName: "Kathleen Shannon and Emily...",
+    timeStamp: "13-minute read",
+    id: 10,
+    isread: false,
+    reads: "",
+    status: false,
+  },
 ];
