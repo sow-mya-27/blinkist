@@ -66,7 +66,7 @@ const typographyAtomStyles = createTheme({
       fontFamily: "Cera Pro",
       fontStyle: "Regular",
       fontSize: "16px",
-      fontWeight:400,
+      fontWeight: 400,
       color: "#6D787E",
       textTransform: "capitalize",
     },

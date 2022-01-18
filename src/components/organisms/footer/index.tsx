@@ -14,7 +14,7 @@ const Footer = () => {
     body: {
       backgroundColor: "#F1F6F4",
       height: "370px",
-      width: "1440px",
+      width: "100vw",
       paddingTop: "38px",
     },
     body1: {
@@ -27,7 +27,7 @@ const Footer = () => {
       paddingLeft: "260px",
       color: "#6D787E",
     },
-    parent: { display: "flex", justifyContent: "center" },
+    parent: { display: "flex", justifyContent: "center", width: "" },
   });
   const classes = useStyles();
   return (

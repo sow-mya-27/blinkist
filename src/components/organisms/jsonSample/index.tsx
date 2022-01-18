@@ -1,6 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import React, { useState } from "react";
-import { Data } from "../../../data/cardData/index";
+import React, { useEffect, useState } from "react";
 import BookCard from "../../molecules/bookCard/index";
 import Box from "@mui/material/Box";
 import { Button, Grid } from "@material-ui/core";
@@ -49,7 +48,17 @@ const JsonSample = () => {
       color: "#6D787E",
     };
   }
-  const [bookData, setBookData] = useState(Data);
+  const [bookData, setBookData] = useState<null | any>(null);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/Data")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setBookData(data);
+      });
+  }, []);
   return (
     <div className={classes.parent}>
       <div className={classes.root}>
@@ -103,56 +112,57 @@ const JsonSample = () => {
         </div>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
-            {bookData.map((d) => (
-              <Grid
-                item
-                xs={2}
-                sm={4}
-                md={4}
-                key={d.id}
-                className={classes.root}
-              >
-                {d.status && currently ? (
-                  <BookCard
-                    mode={"normal"}
-                    bookName={d.cardName}
-                    authorName={d.authorName}
-                    src={d.src}
-                    time={d.timeStamp}
-                    read={d.reads}
-                    status={d.isread}
-                  />
-                ) : (
-                  <div></div>
-                )}
-                {!d.status && finished ? (
-                  <BookCard
-                    mode={"finished"}
-                    bookName={d.cardName}
-                    authorName={d.authorName}
-                    src={d.src}
-                    time={d.timeStamp}
-                    read={d.reads}
-                    status={d.isread}
-                  />
-                ) : (
-                  <div></div>
-                )}
-                {!d.status && currently ? (
-                  <BookCard
-                    mode={"read again"}
-                    bookName={d.cardName}
-                    authorName={d.authorName}
-                    src={d.src}
-                    time={d.timeStamp}
-                    read={d.reads}
-                    status={d.isread}
-                  />
-                ) : (
-                  <div></div>
-                )}
-              </Grid>
-            ))}
+            {bookData &&
+              bookData.map((d: any) => (
+                <Grid
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  key={d.id}
+                  className={classes.root}
+                >
+                  {d.status && currently ? (
+                    <BookCard
+                      mode={"normal"}
+                      bookName={d.cardName}
+                      authorName={d.authorName}
+                      src={d.src}
+                      time={d.timeStamp}
+                      read={d.reads}
+                      status={d.isread}
+                    />
+                  ) : (
+                    <div></div>
+                  )}
+                  {!d.status && finished ? (
+                    <BookCard
+                      mode={"finished"}
+                      bookName={d.cardName}
+                      authorName={d.authorName}
+                      src={d.src}
+                      time={d.timeStamp}
+                      read={d.reads}
+                      status={d.isread}
+                    />
+                  ) : (
+                    <div></div>
+                  )}
+                  {!d.status && currently ? (
+                    <BookCard
+                      mode={"read again"}
+                      bookName={d.cardName}
+                      authorName={d.authorName}
+                      src={d.src}
+                      time={d.timeStamp}
+                      read={d.reads}
+                      status={d.isread}
+                    />
+                  ) : (
+                    <div></div>
+                  )}
+                </Grid>
+              ))}
           </Grid>
         </Box>
       </div>

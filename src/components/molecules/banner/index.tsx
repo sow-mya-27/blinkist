@@ -1,9 +1,10 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import Text from "../../atoms/text";
+import Image from "../../atoms/images";
 const useStyles = makeStyles({
   root: {
-    width: "912px",
+    width: "512px",
     height: "264px",
     backgroundColor: "#F1F6F4",
     paddingLeft: "45px",
@@ -15,38 +16,41 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "flex-start",
   },
+  image: {
+    height: "310px",
+    width: "400px",
+  },
 });
 const Banner = () => {
   const classes = useStyles();
   return (
     <div className={classes.parent}>
       <div className={classes.root}>
-        <div>
-          <div className={classes.flexCol}>
-            <Text
-              variant={"h1"}
-              text={"Explore Books on "}
-              height={"35px"}
-              width="300px"
-            ></Text>
-
-            <Text
-              variant={"h1"}
-              text={" entrepreneurship"}
-              height={"35px"}
-              width="300px"
-            ></Text>
+        <div className={classes.flexCol}>
+          <Text
+            variant={"h1"}
+            text={"Explore Books on entrepreneurship"}
+            height={"35px"}
+            width="300px"
+          ></Text>
+          <div style={{ width: "420px", paddingTop: "15px" }}>
             <Text
               variant={"subtitle2"}
               text={
                 " Everything you need to know about thriving on a shoestring budget, making your first million, and hiring right from the start."
               }
               height={"18px"}
+              width="300px"
             ></Text>
           </div>
-          <div></div>
         </div>
-        <div></div>
+      </div>
+      <div>
+        <img
+          className={classes.image}
+          src={"../../../../banner.png"}
+          alt="banner"
+        />
       </div>
     </div>
   );
