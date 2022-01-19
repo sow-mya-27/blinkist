@@ -5,6 +5,7 @@ import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 import Button from "@mui/material/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScienceOutlinedIcon from "@mui/icons-material/ScienceOutlined";
+import { Link } from "react-router-dom";
 import {
   faGlobe,
   faMonument,
@@ -91,17 +92,19 @@ const HeaderPopUp = () => {
         />
         <div className={classes.flex}>
           <div className={classes.flexCol}>
-            <Button
-              variant="text"
-              startIcon={<RocketOutlinedIcon sx={{ color: "#0365F2" }} />}
-            >
-              <Text
-                variant={"body2"}
-                text={"Entrepreneurship"}
-                height={""}
-                color="#0365F2"
-              ></Text>
-            </Button>
+            <Link to="/enterpreuner">
+              <Button
+                variant="text"
+                startIcon={<RocketOutlinedIcon sx={{ color: "#0365F2" }} />}
+              >
+                <Text
+                  variant={"body2"}
+                  text={"Entrepreneurship"}
+                  height={""}
+                  color="#0365F2"
+                ></Text>
+              </Button>
+            </Link>
             <Button
               variant="text"
               startIcon={<ScienceOutlinedIcon sx={{ color: "#6D787E" }} />}

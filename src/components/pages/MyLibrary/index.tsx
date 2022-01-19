@@ -1,16 +1,29 @@
-import React from "react";
 import Footer from "../../organisms/footer";
 import Header from "../../organisms/header";
-import JsonSample from "../../organisms/jsonSample";
 import MyLibraryTemplate from "../../organisms/myLibrary";
 import HomePageTemplate from "../../templates/HomePage";
 
-const MyLibrary = () => {
+type data = {
+  src: string;
+  cardName: string;
+  authorName: String;
+  timeStamp: String;
+  id: number;
+  isread: boolean;
+  reads: string;
+  status: boolean;
+};
+const MyLibrary = (props: { book: data[]; setData: any }) => {
   return (
-    <div >
+    <div>
       <HomePageTemplate
         header={<Header></Header>}
-        body={<JsonSample></JsonSample>}
+        body={
+          <MyLibraryTemplate
+            book={props.book}
+            setData={props.setData}
+          ></MyLibraryTemplate>
+        }
         footer={<Footer></Footer>}
       />
     </div>

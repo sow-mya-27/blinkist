@@ -1,7 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import Text from "../../atoms/text";
-import Image from "../../atoms/images";
 const useStyles = makeStyles({
   root: {
     width: "512px",
@@ -9,6 +8,7 @@ const useStyles = makeStyles({
     backgroundColor: "#F1F6F4",
     paddingLeft: "45px",
     paddingTop: "45px",
+    marginTop: "30px",
   },
   parent: { display: "flex", justifyContent: "center" },
   flexCol: {
@@ -19,6 +19,8 @@ const useStyles = makeStyles({
   image: {
     height: "310px",
     width: "400px",
+
+    marginTop: "30px",
   },
 });
 const Banner = () => {

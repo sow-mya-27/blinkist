@@ -1,5 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
+import { ThemeProvider as MUIThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "emotion-theming";
 import Card from ".";
 export default {
   title: "molecules/Card",

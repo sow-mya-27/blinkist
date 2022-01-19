@@ -1,11 +1,19 @@
 import { makeStyles } from "@mui/styles";
-import React, { useContext, useEffect, useState } from "react";
 import BookCard from "../../molecules/bookCard/index";
 import Box from "@mui/material/Box";
 import { Button, Grid } from "@material-ui/core";
 import Text from "../../atoms/text/index";
-// import { ParentData } from "../parent";
-
+import { useState } from "react";
+// type book = {
+//   src: string;
+//   cardName: string;
+//   authorName: String;
+//   timeStamp: String;
+//   id: number;
+//   isread: boolean;
+//   reads: string;
+//   status: boolean;
+// };
 const useStyles = makeStyles({
   root: { width: "920px" },
   parent: { display: "flex", justifyContent: "center" },
@@ -27,8 +35,17 @@ const useStyles = makeStyles({
     height: "0px",
   },
 });
-
-const MyLibraryTemplate = (props: { name: string }) => {
+type data = {
+  src: string;
+  cardName: string;
+  authorName: String;
+  timeStamp: String;
+  id: number;
+  isread: boolean;
+  reads: string;
+  status: boolean;
+};
+const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
   const classes = useStyles();
   const [currently, setCurrently] = useState(true);
   const [finished, setFinished] = useState(false);
@@ -49,127 +66,134 @@ const MyLibraryTemplate = (props: { name: string }) => {
       color: "#6D787E",
     };
   }
-  // const [bookData, setBookData] = useState<null | any>(null);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:8000/Data")
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       setBookData(data);
-  //     });
-  // }, []);
-  // const [bookData, setBookData] = useContext(ParentData);
   return (
-    <div>{props.name}</div>
-    // <div className={classes.parent}>
-    //   <div className={classes.root}>
-    //     <div className={classes.text}>
-    //       <Text
-    //         variant={"h1"}
-    //         text={"My Library"}
-    //         height={"36px"}
-    //         color="#03314B"
-    //       />
-    //     </div>
-    //     <div className={classes.currently}>
-    //       <Button
-    //         className={classes.buttonStyle}
-    //         variant="text"
-    //         onClick={() => {
-    //           setCurrently(true);
-    //           setFinished(false);
-    //         }}
-    //         style={style1}
-    //       >
-    //         <Text
-    //           variant={"subtitle1"}
-    //           text={"Currently Reading"}
-    //           height={"18px"}
-    //         />
-    //       </Button>
+    <div className={classes.parent}>
+      <div className={classes.root}>
+        <div className={classes.text}>
+          <Text
+            variant={"h1"}
+            text={"My Library"}
+            height={"36px"}
+            color="#03314B"
+          />
+        </div>
+        <div className={classes.currently}>
+          <Button
+            className={classes.buttonStyle}
+            variant="text"
+            onClick={() => {
+              setCurrently(true);
+              setFinished(false);
+            }}
+            style={style1}
+          >
+            <Text
+              variant={"subtitle1"}
+              text={"Currently Reading"}
+              height={"18px"}
+            />
+          </Button>
 
-    //       <Button
-    //         className={classes.buttonStyle}
-    //         variant="text"
-    //         onClick={() => {
-    //           setCurrently(false);
-    //           setFinished(true);
-    //         }}
-    //         style={style2}
-    //       >
-    //         <Text variant={"subtitle1"} text={"Finished "} height={"18px"} />
-    //       </Button>
-    //       <div className={classes.parent}>
-    //         <hr
-    //           className={classes.line}
-    //           style={currently ? { color: "#2CE080" } : { color: "#F1F6F4" }}
-    //         ></hr>
-    //         <hr
-    //           className={classes.line}
-    //           style={finished ? { color: "#2CE080" } : { color: "#F1F6F4" }}
-    //         ></hr>
-    //         <hr className={classes.line} style={{ color: "#F1F6F4" }}></hr>
-    //       </div>
-    //     </div>
-    //     <Box sx={{ flexGrow: 1 }}>
-    //       <Grid container spacing={2}>
-    //         {bookData &&
-    //           bookData.map((d: any) => (
-    //             <Grid
-    //               item
-    //               xs={2}
-    //               sm={4}
-    //               md={4}
-    //               key={d.id}
-    //               className={classes.root}
-    //             >
-    //               {d.status && currently ? (
-    //                 <BookCard
-    //                   mode={"normal"}
-    //                   bookName={d.cardName}
-    //                   authorName={d.authorName}
-    //                   src={d.src}
-    //                   time={d.timeStamp}
-    //                   read={d.reads}
-    //                   status={d.isread}
-    //                 />
-    //               ) : (
-    //                 <div></div>
-    //               )}
-    //               {!d.status && finished ? (
-    //                 <BookCard
-    //                   mode={"finished"}
-    //                   bookName={d.cardName}
-    //                   authorName={d.authorName}
-    //                   src={d.src}
-    //                   time={d.timeStamp}
-    //                   read={d.reads}
-    //                   status={d.isread}
-    //                 />
-    //               ) : (
-    //                 <div></div>
-    //               )}
-    //               {!d.status && currently ? (
-    //                 <BookCard
-    //                   mode={"read again"}
-    //                   bookName={d.cardName}
-    //                   authorName={d.authorName}
-    //                   src={d.src}
-    //                   time={d.timeStamp}
-    //                   read={d.reads}
-    //                   status={d.isread}
-    //                 />
-    //               ) : (
-    //                 <div></div>
-    //               )}
-    //             </Grid>
-    //           ))}
-    //       </Grid>
-    //     </Box>
-    //   </div>
-    // </div>
+          <Button
+            className={classes.buttonStyle}
+            variant="text"
+            onClick={() => {
+              setCurrently(false);
+              setFinished(true);
+            }}
+            style={style2}
+          >
+            <Text variant={"subtitle1"} text={"Finished "} height={"18px"} />
+          </Button>
+          <div className={classes.parent}>
+            <hr
+              className={classes.line}
+              style={currently ? { color: "#2CE080" } : { color: "#F1F6F4" }}
+            ></hr>
+            <hr
+              className={classes.line}
+              style={finished ? { color: "#2CE080" } : { color: "#F1F6F4" }}
+            ></hr>
+            <hr className={classes.line} style={{ color: "#F1F6F4" }}></hr>
+          </div>
+        </div>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            {props.book &&
+              props.book.map((d: any) => {
+                if (d.status) {
+                  return (
+                    currently && (
+                      <Grid
+                        item
+                        xs={2}
+                        sm={4}
+                        md={4}
+                        key={d.id}
+                        className={classes.root}
+                      >
+                        <BookCard
+                          mode={"normal"}
+                          bookName={d.cardName}
+                          authorName={d.authorName}
+                          src={d.src}
+                          time={d.timeStamp}
+                          read={d.reads}
+                          status={d.isread}
+                        />
+                      </Grid>
+                    )
+                  );
+                }
+                if (!d.status && finished) {
+                  return (
+                    <Grid
+                      item
+                      xs={2}
+                      sm={4}
+                      md={4}
+                      key={d.id}
+                      className={classes.root}
+                    >
+                      <BookCard
+                        mode={"finished"}
+                        bookName={d.cardName}
+                        authorName={d.authorName}
+                        src={d.src}
+                        time={d.timeStamp}
+                        read={d.reads}
+                        status={d.isread}
+                      />
+                    </Grid>
+                  );
+                }
+                if (!d.status && currently) {
+                  console.log("hi");
+                  <Grid
+                    item
+                    xs={2}
+                    sm={4}
+                    md={4}
+                    key={d.id}
+                    className={classes.root}
+                  >
+                    <BookCard
+                      mode={"read again"}
+                      bookName={d.cardName}
+                      authorName={d.authorName}
+                      src={d.src}
+                      time={d.timeStamp}
+                      read={d.reads}
+                      status={d.isread}
+                    />
+                  </Grid>;
+                }
+              })}
+          </Grid>
+        </Box>
+      </div>
+    </div>
   );
 };
 export default MyLibraryTemplate;

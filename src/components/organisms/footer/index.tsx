@@ -8,7 +8,7 @@ const Footer = () => {
       display: "flex",
       justifyContent: "space-around",
       alignContent: "flex-start",
-      paddingLeft: "220px",
+      paddingLeft: "310px",
       paddingRight: "190px",
     },
     body: {
@@ -24,7 +24,7 @@ const Footer = () => {
     },
     gamma: {
       paddingTop: "48px",
-      paddingLeft: "260px",
+      paddingLeft: "370px",
       color: "#6D787E",
     },
     parent: { display: "flex", justifyContent: "center", width: "" },

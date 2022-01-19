@@ -1,8 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-
+import MyLibrary from "./components/pages/MyLibrary";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Entrepreneurship from "./components/pages/enterpreuner";
+type data = {
+  src: string;
+  cardName: string;
+  authorName: String;
+  timeStamp: String;
+  id: number;
+  isread: boolean;
+  reads: string;
+  status: boolean;
+};
 function App() {
-  return <div className="App"></div>;
-}
+  const [bookData, setBookData] = useState<data[]>([]);
 
+  useEffect(() => {
+    fetch("http://localhost:8000/Data")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setBookData(data);
+      });
+  }, []);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <MyLibrary book={bookData} setData={setBookData}></MyLibrary>
+          }
+        />
+        <Route
+          path="/enterpreuner"
+          element={
+            <Entrepreneurship
+              book={bookData}
+              setData={setBookData}
+            ></Entrepreneurship>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 export default App;

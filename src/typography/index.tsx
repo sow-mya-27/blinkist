@@ -1,4 +1,3 @@
-import { blueGrey } from "@material-ui/core/colors";
 import { createTheme } from "@mui/material/styles";
 const typographyAtomStyles = createTheme({
   palette: {

@@ -48,6 +48,12 @@ const useStyles = makeStyles({
     marginBottom: "0px",
     borderBottom: "none",
   },
+  hover: {
+    backgroundColor: "white",
+    "&:hover": {
+      backgroundColor: "#F1F6F4",
+    },
+  },
   flex: { display: "flex" },
   first: {
     width: "30%",
@@ -92,23 +98,25 @@ const Card = (props: MyProps) => {
   return (
     <div className={classes.root}>
       <img src={props.src} alt="book_image"></img>
-      <div className={classes.book}>
-        <Text
-          variant="subtitle1"
-          text={props.bookName}
-          height={"16px"}
-          color="#03314B"
-        />
-      </div>
-      <div className={classes.author}>
-        <Text variant="body1" text={props.authorName} height={"15px"} />
-      </div>
-      <div className={classes.time}>
-        <AccessTimeIcon
-          sx={{ paddingLeft: "17.67px", height: "16px", width: "16px" }}
-        />
-        <Text variant="caption" text={props.time} height={"13px"} />{" "}
-        {readStatus}
+      <div className={classes.hover}>
+        <div className={classes.book}>
+          <Text
+            variant="subtitle1"
+            text={props.bookName}
+            height={"16px"}
+            color="#03314B"
+          />
+        </div>
+        <div className={classes.author}>
+          <Text variant="body1" text={props.authorName} height={"15px"} />
+        </div>
+        <div className={classes.time}>
+          <AccessTimeIcon
+            sx={{ paddingLeft: "17.67px", height: "16px", width: "16px" }}
+          />
+          <Text variant="caption" text={props.time} height={"13px"} />
+          {readStatus}
+        </div>
       </div>
       {bottom}
     </div>

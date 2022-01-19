@@ -5,9 +5,7 @@ export default {
   title: "organisms / MyLibraryTemplate",
   component: MyLibraryTemplate,
 };
-const Template: ComponentStory<typeof MyLibraryTemplate> = (args) => (
-  <MyLibraryTemplate />
-);
 
-export const MyLibrarytemplate = Template.bind({});
-MyLibrarytemplate.args = {};
+export const myLibraryTemplate = (
+  <MyLibraryTemplate book={[]} setData={undefined} />
+);
