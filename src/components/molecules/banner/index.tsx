@@ -1,6 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import Text from "../../atoms/text";
+import Image from "../../atoms/images";
 const useStyles = makeStyles({
   root: {
     width: "512px",
@@ -17,8 +18,8 @@ const useStyles = makeStyles({
     alignItems: "flex-start",
   },
   image: {
-    height: "310px",
-    width: "400px",
+    // height: "310px",
+    // width: "400px",
 
     marginTop: "30px",
   },
@@ -47,12 +48,13 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div>
-        <img
+      <div className={classes.image}>
+        <Image src={"../../../../banner.png"} height={310} width={310}></Image>
+        {/* <img
           className={classes.image}
           src={"../../../../banner.png"}
           alt="banner"
-        />
+        /> */}
       </div>
     </div>
   );

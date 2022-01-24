@@ -6,8 +6,8 @@ import HomePageTemplate from "../../templates/HomePage";
 type data = {
   src: string;
   cardName: string;
-  authorName: String;
-  timeStamp: String;
+  authorName: string;
+  timeStamp: string;
   id: number;
   isread: boolean;
   reads: string;

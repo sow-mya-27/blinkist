@@ -4,11 +4,12 @@ import Box from "@mui/material/Box";
 import { Button, Grid } from "@material-ui/core";
 import Text from "../../atoms/text/index";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // type book = {
 //   src: string;
 //   cardName: string;
-//   authorName: String;
-//   timeStamp: String;
+//   authorName: string;
+//   timeStamp: string;
 //   id: number;
 //   isread: boolean;
 //   reads: string;
@@ -38,8 +39,8 @@ const useStyles = makeStyles({
 type data = {
   src: string;
   cardName: string;
-  authorName: String;
-  timeStamp: String;
+  authorName: string;
+  timeStamp: string;
   id: number;
   isread: boolean;
   reads: string;
@@ -66,6 +67,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
       color: "#6D787E",
     };
   }
+  const navigate = useNavigate();
 
   return (
     <div className={classes.parent}>
@@ -133,20 +135,61 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                        <BookCard
-                          mode={"normal"}
-                          bookName={d.cardName}
-                          authorName={d.authorName}
-                          src={d.src}
-                          time={d.timeStamp}
-                          read={d.reads}
-                          status={d.isread}
-                        />
+                        <div
+                          onClick={() => {
+                            navigate("/enterpreuner/bookdetails", {
+                              state: d.id,
+                            });
+                          }}
+                        >
+                          <BookCard
+                            mode={"normal"}
+                            bookName={d.cardName}
+                            authorName={d.authorName}
+                            src={d.src}
+                            time={d.timeStamp}
+                            read={d.reads}
+                            status={d.isread}
+                          />
+                        </div>
                       </Grid>
                     )
                   );
                 }
                 if (!d.status && finished) {
+                  return (
+                    finished && (
+                      <Grid
+                        item
+                        xs={2}
+                        sm={4}
+                        md={4}
+                        key={d.id}
+                        className={classes.root}
+                      >
+                        <div
+                          onClick={() => {
+                            navigate("/enterpreuner/bookdetails", {
+                              state: d.id,
+                            });
+                          }}
+                        >
+                          <BookCard
+                            mode={"read again"}
+                            bookName={d.cardName}
+                            authorName={d.authorName}
+                            src={d.src}
+                            time={d.timeStamp}
+                            read={d.reads}
+                            status={d.isread}
+                          />
+                        </div>
+                      </Grid>
+                    )
+                  );
+                }
+                if (!d.status && currently) {
+                  // console.log("hi");
                   return (
                     <Grid
                       item
@@ -156,38 +199,25 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                       key={d.id}
                       className={classes.root}
                     >
-                      <BookCard
-                        mode={"finished"}
-                        bookName={d.cardName}
-                        authorName={d.authorName}
-                        src={d.src}
-                        time={d.timeStamp}
-                        read={d.reads}
-                        status={d.isread}
-                      />
+                      <div
+                        onClick={() => {
+                          navigate("/enterpreuner/bookdetails", {
+                            state: d.id,
+                          });
+                        }}
+                      >
+                        <BookCard
+                          mode={"finished"}
+                          bookName={d.cardName}
+                          authorName={d.authorName}
+                          src={d.src}
+                          time={d.timeStamp}
+                          read={d.reads}
+                          status={d.isread}
+                        />
+                      </div>
                     </Grid>
                   );
-                }
-                if (!d.status && currently) {
-                  console.log("hi");
-                  <Grid
-                    item
-                    xs={2}
-                    sm={4}
-                    md={4}
-                    key={d.id}
-                    className={classes.root}
-                  >
-                    <BookCard
-                      mode={"read again"}
-                      bookName={d.cardName}
-                      authorName={d.authorName}
-                      src={d.src}
-                      time={d.timeStamp}
-                      read={d.reads}
-                      status={d.isread}
-                    />
-                  </Grid>;
                 }
               })}
           </Grid>

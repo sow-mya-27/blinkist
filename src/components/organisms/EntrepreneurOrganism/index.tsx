@@ -8,6 +8,9 @@ import FormControl from "@mui/material/FormControl";
 import Search from "@mui/icons-material/Search";
 import Banner from "../../molecules/banner";
 import { Grid } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 const useStyles = makeStyles({
   root: { width: "920px" },
   parent: { display: "flex", justifyContent: "center" },
@@ -32,7 +35,10 @@ const useStyles = makeStyles({
 });
 
 const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
+  const [value, setValue] = useState("");
+
   const classes = useStyles();
+  const navigate = useNavigate();
 
   return (
     <div className={classes.parent}>
@@ -44,14 +50,12 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
               sx={{ width: "658px" }}
               placeholder="Search by title or author"
               id="input-with-icon-adornment"
+              value={value}
               startAdornment={
                 <InputAdornment position="start">
                   <Search />
                 </InputAdornment>
               }
-              onChange={(e) => {
-                console.log(e.target.value);
-              }}
             />
           </FormControl>
         </div>
@@ -76,26 +80,42 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                     key={d.id}
                     className={classes.root}
                   >
-                    {d.isEnt ? (
-                      <BookCard
-                        mode={"non-hover"}
-                        bookName={d.cardName}
-                        authorName={d.authorName}
-                        src={d.src}
-                        time={d.timeStamp}
-                        read={d.reads}
-                        status={d.isread}
-                      />
+                    {d.startedBook ? (
+                      <div
+                        onClick={() => {
+                          navigate("/enterpreuner/bookdetails", {
+                            state: d.id,
+                          });
+                        }}
+                      >
+                        <BookCard
+                          mode={"non-hover"}
+                          bookName={d.cardName}
+                          authorName={d.authorName}
+                          src={d.src}
+                          time={d.timeStamp}
+                          read={d.reads}
+                          status={d.isread}
+                        />
+                      </div>
                     ) : (
-                      <BookCard
-                        mode={"normal"}
-                        bookName={d.cardName}
-                        authorName={d.authorName}
-                        src={d.src}
-                        time={d.timeStamp}
-                        read={d.reads}
-                        status={d.isread}
-                      />
+                      <div
+                        onClick={() => {
+                          navigate("/enterpreuner/bookdetails", {
+                            state: d.id,
+                          });
+                        }}
+                      >
+                        <BookCard
+                          mode={"normal"}
+                          bookName={d.cardName}
+                          authorName={d.authorName}
+                          src={d.src}
+                          time={d.timeStamp}
+                          read={d.reads}
+                          status={d.isread}
+                        />
+                      </div>
                     )}
                   </Grid>
                 ))}
@@ -114,15 +134,23 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                       key={d.id}
                       className={classes.root}
                     >
-                      <BookCard
-                        mode={"non-hover"}
-                        bookName={d.cardName}
-                        authorName={d.authorName}
-                        src={d.src}
-                        time={d.timeStamp}
-                        read={d.reads}
-                        status={d.isread}
-                      />
+                      <div
+                        onClick={() => {
+                          navigate("/enterpreuner/bookdetails", {
+                            state: d.id,
+                          });
+                        }}
+                      >
+                        <BookCard
+                          mode={"non-hover"}
+                          bookName={d.cardName}
+                          authorName={d.authorName}
+                          src={d.src}
+                          time={d.timeStamp}
+                          read={d.reads}
+                          status={d.isread}
+                        />
+                      </div>
                     </Grid>
                   );
                 }
@@ -142,15 +170,23 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                     key={d.id}
                     className={classes.root}
                   >
-                    <BookCard
-                      mode={"non-hover"}
-                      bookName={d.cardName}
-                      authorName={d.authorName}
-                      src={d.src}
-                      time={d.timeStamp}
-                      read={d.reads}
-                      status={d.isread}
-                    />
+                    <div
+                      onClick={() => {
+                        navigate("/enterpreuner/bookdetails", {
+                          state: d.id,
+                        });
+                      }}
+                    >
+                      <BookCard
+                        mode={"non-hover"}
+                        bookName={d.cardName}
+                        authorName={d.authorName}
+                        src={d.src}
+                        time={d.timeStamp}
+                        read={d.reads}
+                        status={d.isread}
+                      />
+                    </div>
                   </Grid>
                 ))}
           </Grid>

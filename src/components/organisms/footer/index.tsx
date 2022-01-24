@@ -8,13 +8,11 @@ const Footer = () => {
       display: "flex",
       justifyContent: "space-around",
       alignContent: "flex-start",
-      paddingLeft: "310px",
-      paddingRight: "190px",
     },
     body: {
       backgroundColor: "#F1F6F4",
       height: "370px",
-      width: "100vw",
+      width: "950px",
       paddingTop: "38px",
     },
     body1: {
@@ -24,10 +22,15 @@ const Footer = () => {
     },
     gamma: {
       paddingTop: "48px",
-      paddingLeft: "370px",
+      paddingLeft: "50px",
       color: "#6D787E",
     },
-    parent: { display: "flex", justifyContent: "center", width: "" },
+    parent: {
+      display: "flex",
+      justifyContent: "center",
+      backgroundColor: "#F1F6F4",
+      marginTop: "50px",
+    },
   });
   const classes = useStyles();
   return (
@@ -36,7 +39,7 @@ const Footer = () => {
         <div className={classes.flex}>
           <div>
             <Image
-              src="https://s3-alpha-sig.figma.com/img/1998/167b/ad306203f1382b0f687724d96c675969?Expires=1642982400&Signature=QenNZONknrFbgSSvB6KCId2kRNgJCWMeQ0lGvhOc5YRdNNeo47hZiHBvqGN4UcC33RrjuqTxLi1KGHYMMnEHaYOFLOc71vMyFH1VDvZYbEwa5pTxzfMi~1pzFfOGB7aOj9q5mKwyNaj9osBmHmMxjiLdvWPLnhnAaT4wWnWa9j~L69XTvt-BzLF7y779--67GVSjgo2vHS2-Ri9RoT1uM45uzYAfZcjs-qTs22uBit0-KlE7yn8qEiPpeg3lXOXe7fZaPq3PmtIXrONXZWcyyNl9E7zFmmwk9sLwI9W5nSuFo4k1bFFeq6RqMZ1PCaEPlnOlUufbNkY5ZsP0Ikh03A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              src="../../../../logo.png"
               height={100}
               width={124.09}
             ></Image>

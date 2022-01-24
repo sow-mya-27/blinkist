@@ -29,7 +29,7 @@ const HeaderPopUp = () => {
     root: {
       backgroundColor: "#F1F6F4 ",
       paddingTop: "30px",
-      width: "100vw",
+      width: "1200px",
       height: "398px",
       zIndex: "10",
     },
@@ -46,6 +46,8 @@ const HeaderPopUp = () => {
       height: "304px",
     },
     parent: {
+      backgroundColor: "#F1F6F4 ",
+
       display: "flex",
       justifyContent: "center",
     },

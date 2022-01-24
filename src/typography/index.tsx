@@ -7,6 +7,9 @@ const typographyAtomStyles = createTheme({
     secondary: {
       main: "#03314B",
     },
+    success: {
+      main: "#22C870",
+    },
   },
 
   typography: {
@@ -68,6 +71,16 @@ const typographyAtomStyles = createTheme({
       fontWeight: 400,
       color: "#6D787E",
       textTransform: "capitalize",
+    },
+    h2: {
+      fontFamily: "Cera Pro",
+      fontWeight: 400,
+      fontStyle: "normal",
+      fontSize: "20px",
+      width: "378px",
+      //   height: "18px",
+
+      lineHeight: "25.14px",
     },
   },
 });

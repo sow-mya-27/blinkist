@@ -1,4 +1,5 @@
 import React from "react";
+import BookDetailOrganism from "../../organisms/BookDetailOrganism";
 import EntrepreneurOrganism from "../../organisms/EntrepreneurOrganism";
 import Footer from "../../organisms/footer";
 import Header from "../../organisms/header";
@@ -14,18 +15,18 @@ type data = {
   reads: string;
   status: boolean;
 };
-const Entrepreneurship = (props: { book: data[]; setData: any }) => {
+const BookDetailPage = (props: { book: data[]; setData: any }) => {
   return (
     <EntrepreneurTemplate
       header={<Header></Header>}
       body={
-        <EntrepreneurOrganism
+        <BookDetailOrganism
           book={props.book}
           setData={props.setData}
-        ></EntrepreneurOrganism>
+        ></BookDetailOrganism>
       }
       footer={<Footer></Footer>}
     />
   );
 };
-export default Entrepreneurship;
+export default BookDetailPage;

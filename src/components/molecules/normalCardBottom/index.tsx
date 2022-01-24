@@ -1,7 +1,7 @@
-import { Button } from "@material-ui/core";
 import { makeStyles } from "@mui/styles";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import React from "react";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const Normal = () => {
   const useStyles = makeStyles({
@@ -10,6 +10,7 @@ const Normal = () => {
       flexDirection: "column",
       justifyContent: "space-between",
       height: "52px",
+      // marginBottom: "50px",
     },
     flex: { display: "flex" },
     first: {
@@ -29,6 +30,20 @@ const Normal = () => {
       <MoreHorizIcon
         sx={{ paddingLeft: "247px", color: "#042330" }}
       ></MoreHorizIcon>
+      <LinearProgress
+        value={30}
+        sx={{
+          marginTop: "35px",
+          height: "15px",
+          overflow: "unset",
+          borderRadius: "0px 0px 8px 8px",
+          width: "244px",
+          position: "relative",
+          left: "20px",
+          backgroundColor: "#F1F6F4",
+        }}
+        variant="indeterminate"
+      />
       <div className={classes.flex}>
         <div className={classes.first}></div>
         <div className={classes.second}></div>

@@ -1,7 +1,7 @@
 import { Button } from "@material-ui/core";
 import { Add } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
-import React, { useState } from "react";
+import React from "react";
 import Text from "../../atoms/text/index";
 
 const NonHoverLib = () => {
@@ -13,6 +13,7 @@ const NonHoverLib = () => {
       textAlign: "center",
       backgroundColor: "white",
       color: "#0365F2",
+      marginTop: "20px",
       "&:hover": {
         backgroundColor: "#0365F2",
 

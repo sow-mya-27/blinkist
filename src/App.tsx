@@ -3,11 +3,12 @@ import "./App.css";
 import MyLibrary from "./components/pages/MyLibrary";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Entrepreneurship from "./components/pages/enterpreuner";
+import BookDetailPage from "./components/pages/BookDetailPage";
 type data = {
   src: string;
   cardName: string;
-  authorName: String;
-  timeStamp: String;
+  authorName: string;
+  timeStamp: string;
   id: number;
   isread: boolean;
   reads: string;
@@ -15,15 +16,24 @@ type data = {
 };
 function App() {
   const [bookData, setBookData] = useState<data[]>([]);
-
   useEffect(() => {
-    fetch("http://localhost:8000/Data")
-      .then((res) => {
-        return res.json();
+    // fetch("http://localhost:8000/Data")
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     setBookData(data);
+    //   });
+    const axios = require("axios").default;
+
+    axios({
+      method: "get",
+      url: "http://localhost:8000/Data",
+    })
+      .then((res: any) => {
+        setBookData(res.data);
       })
-      .then((data) => {
-        setBookData(data);
-      });
+      .catch((error: any) => console.log(error));
   }, []);
   return (
     <BrowserRouter>
@@ -41,6 +51,15 @@ function App() {
               book={bookData}
               setData={setBookData}
             ></Entrepreneurship>
+          }
+        />
+        <Route
+          path="/enterpreuner/bookdetails"
+          element={
+            <BookDetailPage
+              book={bookData}
+              setData={setBookData}
+            ></BookDetailPage>
           }
         />
       </Routes>

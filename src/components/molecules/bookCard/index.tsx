@@ -9,7 +9,7 @@ import ReadAgain from "../ReadAgain/index";
 import HoverLib from "../HoverButton";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 type MyProps = {
-  mode: String;
+  mode: string;
   bookName: string;
   authorName: string;
   src: string;
@@ -45,15 +45,10 @@ const useStyles = makeStyles({
     width: "284px",
     height: "466px",
     borderRadius: "8px",
-    marginBottom: "0px",
+    marginBottom: "25px",
     borderBottom: "none",
   },
-  hover: {
-    backgroundColor: "white",
-    "&:hover": {
-      backgroundColor: "#F1F6F4",
-    },
-  },
+
   flex: { display: "flex" },
   first: {
     width: "30%",
@@ -98,7 +93,7 @@ const Card = (props: MyProps) => {
   return (
     <div className={classes.root}>
       <img src={props.src} alt="book_image"></img>
-      <div className={classes.hover}>
+      <div>
         <div className={classes.book}>
           <Text
             variant="subtitle1"
