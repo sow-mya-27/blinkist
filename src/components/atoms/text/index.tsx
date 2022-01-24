@@ -17,11 +17,13 @@ const Text = (props: MyProps) => {
   });
   const classes = useStyles();
   return (
-    <ThemeProvider theme={typographyAtomStyles}>
-      <Typography className={classes.root} variant={props.variant}>
-        {props.text}
-      </Typography>
-    </ThemeProvider>
+    <div id="text">
+      <ThemeProvider theme={typographyAtomStyles}>
+        <Typography className={classes.root} variant={props.variant}>
+          {props.text}
+        </Typography>
+      </ThemeProvider>
+    </div>
   );
 };
 export default Text;

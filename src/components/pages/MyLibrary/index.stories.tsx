@@ -1,12 +1,16 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
 import MyLibrary from ".";
+import { BrowserRouter as Router } from "react-router-dom";
+
 export default {
   title: "pages / MyLibrary",
   component: MyLibrary,
 };
 const Template: ComponentStory<typeof MyLibrary> = (args) => (
-  <MyLibrary book={[]} setData={undefined} />
+  <Router>
+    <MyLibrary book={[]} setData={undefined} />
+  </Router>
 );
 
 export const Mylibrary = Template.bind({});
