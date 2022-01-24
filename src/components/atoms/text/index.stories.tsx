@@ -7,8 +7,8 @@ export default {
 };
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 
-export const images = Template.bind({});
-images.args = {
+export const text = Template.bind({});
+text.args = {
   variant: "h1",
   text: "My Library",
   height: "45px",

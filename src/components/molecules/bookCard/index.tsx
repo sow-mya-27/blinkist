@@ -6,7 +6,6 @@ import NonHoverLib from "../nonHoverButton/index";
 import Normal from "../normalCardBottom/index";
 import Finished from "../finished/index";
 import ReadAgain from "../ReadAgain/index";
-import HoverLib from "../HoverButton";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 type MyProps = {
   mode: string;
@@ -76,9 +75,9 @@ const Card = (props: MyProps) => {
   if (props.mode === "non-hover") {
     bottom = <NonHoverLib></NonHoverLib>;
   }
-  if (props.mode === "hover") {
-    bottom = <HoverLib></HoverLib>;
-  }
+  // if (props.mode === "hover") {
+  //   bottom = <HoverLib></HoverLib>;
+  // }
   let readStatus = <div></div>;
   if (props.status) {
     readStatus = (

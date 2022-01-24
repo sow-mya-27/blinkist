@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory } from "@storybook/react";
 import Banner from ".";
 export default {
-  title: "organisms / Banner",
+  title: "molecules / Banner",
   component: Banner,
 };
 const Template: ComponentStory<typeof Banner> = (args) => <Banner />;

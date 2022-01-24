@@ -10,6 +10,7 @@ const Normal = () => {
       flexDirection: "column",
       justifyContent: "space-between",
       height: "52px",
+      width: "284px",
       // marginBottom: "50px",
     },
     flex: { display: "flex" },

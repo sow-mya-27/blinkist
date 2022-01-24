@@ -36,34 +36,32 @@ function App() {
       .catch((error: any) => console.log(error));
   }, []);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <MyLibrary book={bookData} setData={setBookData}></MyLibrary>
-          }
-        />
-        <Route
-          path="/enterpreuner"
-          element={
-            <Entrepreneurship
-              book={bookData}
-              setData={setBookData}
-            ></Entrepreneurship>
-          }
-        />
-        <Route
-          path="/enterpreuner/bookdetails"
-          element={
-            <BookDetailPage
-              book={bookData}
-              setData={setBookData}
-            ></BookDetailPage>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    <Routes>
+      <Route
+        path="/"
+        element={<MyLibrary book={bookData} setData={setBookData}></MyLibrary>}
+      />
+      <Route
+        path="/enterpreuner"
+        element={
+          <Entrepreneurship
+            book={bookData}
+            setData={setBookData}
+          ></Entrepreneurship>
+        }
+      />
+      <Route
+        path="/enterpreuner/bookdetails"
+        element={
+          <BookDetailPage
+            book={bookData}
+            setData={setBookData}
+          ></BookDetailPage>
+        }
+      />
+    </Routes>
+    // </BrowserRouter>
   );
 }
 export default App;

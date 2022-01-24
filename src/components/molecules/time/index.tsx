@@ -1,14 +1,10 @@
 import React from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import Icons from "../../atoms/icons";
 import Text from "../../atoms/text";
 import { AccessTime } from "@mui/icons-material";
-import { makeStyles } from "@mui/material";
 
 type MyProps = {};
 const Time = (props: MyProps) => {
-  const node = <AccessTimeIcon></AccessTimeIcon>;
-
   return (
     <div>
       <AccessTime></AccessTime>

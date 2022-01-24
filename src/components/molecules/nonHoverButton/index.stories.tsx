@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import NonHoverLib from ".";
 export default {
-  title: "molecules / nonHoverLib",
+  title: "molecules / buttonIcon",
   component: NonHoverLib,
 };
 const Template: ComponentStory<typeof NonHoverLib> = (args) => <NonHoverLib />;
