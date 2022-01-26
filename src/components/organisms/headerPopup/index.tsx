@@ -5,7 +5,7 @@ import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 import Button from "@mui/material/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScienceOutlinedIcon from "@mui/icons-material/ScienceOutlined";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   faGlobe,
   faMonument,
@@ -25,6 +25,7 @@ import SignalCellularAltOutlinedIcon from "@mui/icons-material/SignalCellularAlt
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 const HeaderPopUp = () => {
+  const navigate = useNavigate();
   const useStyles = makeStyles({
     root: {
       backgroundColor: "#F1F6F4 ",
@@ -78,12 +79,6 @@ const HeaderPopUp = () => {
             width={"188px"}
             color="#6D787E"
           ></Text>
-          {/* <Text
-          variant={"body1"}
-          text={" "}
-          height={"16px"}
-          width={"188px"}
-        ></Text> */}
         </div>
         <br />
         <hr
@@ -94,19 +89,18 @@ const HeaderPopUp = () => {
         />
         <div className={classes.flex}>
           <div className={classes.flexCol}>
-            <Link to="/enterpreuner">
-              <Button
-                variant="text"
-                startIcon={<RocketOutlinedIcon sx={{ color: "#0365F2" }} />}
-              >
-                <Text
-                  variant={"body2"}
-                  text={"Entrepreneurship"}
-                  height={""}
-                  color="#0365F2"
-                ></Text>
-              </Button>
-            </Link>
+            <Button
+              variant="text"
+              startIcon={<RocketOutlinedIcon sx={{ color: "#0365F2" }} />}
+              onClick={() => navigate("/enterpreuner")}
+            >
+              <Text
+                variant={"body2"}
+                text={"Entrepreneurship"}
+                height={""}
+                color="#0365F2"
+              ></Text>
+            </Button>
             <Button
               variant="text"
               startIcon={<ScienceOutlinedIcon sx={{ color: "#6D787E" }} />}

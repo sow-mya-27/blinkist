@@ -8,8 +8,10 @@ export default {
   component: MyLibraryTemplate,
 };
 
-export const myLibraryTemplate = (
+const template: ComponentStory<typeof MyLibraryTemplate> = (args) => (
   <Router>
     <MyLibraryTemplate book={[]} setData={undefined} />
   </Router>
 );
+
+export const myLibraryTemplate = template.bind({});

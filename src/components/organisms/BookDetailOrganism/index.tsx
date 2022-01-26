@@ -75,6 +75,7 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
 
   if (props.book[id]) {
     src1 = props.book[id].src;
+    console.log(src1);
     bookName = props.book[id].cardName;
     authorName = props.book[id].authorName;
     timeStamp = props.book[id].timeStamp;

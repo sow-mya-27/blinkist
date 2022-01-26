@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof HeaderPopUp> = (args) => (
   </Router>
 );
 
-export const HeaderPopup = Template.bind({});
-HeaderPopup.args = {};
+export const headerPopup = Template.bind({});
+headerPopup.args = {};

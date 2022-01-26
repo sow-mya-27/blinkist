@@ -69,6 +69,8 @@ const Details = (props: {
           color="#6D787E"
         ></Text>
       </div>
+      {console.log(typeof props.src)}
+      <img src={props.src} />
       <div style={{ paddingTop: "40px" }}>
         <Image src={props.src} height={304} width={304}></Image>
       </div>

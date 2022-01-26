@@ -7,7 +7,7 @@ export default {
 };
 const Template: ComponentStory<typeof Details> = (args) => (
   <Details
-    book={undefined}
+    book={[]}
     setData={undefined}
     src={"assets/biggboss.png"}
     bookName={"Being Boss"}

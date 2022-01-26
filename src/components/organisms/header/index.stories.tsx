@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { linkTo } from "@storybook/addon-links";
+// import { linkTo } from "@storybook/addon-links";
 import Header from ".";
 import { BrowserRouter as Router } from "react-router-dom";
 export default {
