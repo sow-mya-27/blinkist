@@ -33,7 +33,7 @@ const useStyles = makeStyles({
   },
   line: {
     width: "304px",
-    height: "0px",
+    height: "2px",
   },
 });
 type data = {
@@ -63,9 +63,6 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
     style2 = {
       color: "#22C870",
     };
-    style1 = {
-      color: "#6D787E",
-    };
   }
   const navigate = useNavigate();
 
@@ -88,13 +85,15 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               setCurrently(true);
               setFinished(false);
             }}
-            style={style1}
-          >
-            <Text
-              variant={"subtitle1"}
-              text={"Currently Reading"}
-              height={"18px"}
-            />
+          ><div style={{paddingLeft:"0px",paddingRight:"120px"}}>{currently?<Text
+            variant={"subtitle1Blue"}
+            text={"Currently Reading"}
+            height={"18px"}
+          />:<Text
+          variant={"subtitle1"}
+          text={"Currently Reading"}
+          height={"18px"}
+        />}</div>
           </Button>
 
           <Button
@@ -105,17 +104,16 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               setFinished(true);
             }}
             style={style2}
-          >
-            <Text variant={"subtitle1"} text={"Finished "} height={"18px"} />
+          >{finished?<Text variant={"subtitle1Blue"} text={"Finished "} height={"18px"} />:<Text variant={"subtitle1"} text={"Finished "} height={"18px"} />}
           </Button>
           <div className={classes.parent}>
             <hr
               className={classes.line}
-              style={currently ? { color: "#2CE080" } : { color: "#F1F6F4" }}
+              style={currently ? { backgroundColor: "#2CE080" } : { backgroundColor: "#F1F6F4" }}
             ></hr>
             <hr
               className={classes.line}
-              style={finished ? { color: "#2CE080" } : { color: "#F1F6F4" }}
+              style={finished ? { backgroundColor: "#2CE080" } : { backgroundColor: "#F1F6F4" }}
             ></hr>
             <hr className={classes.line} style={{ color: "#F1F6F4" }}></hr>
           </div>

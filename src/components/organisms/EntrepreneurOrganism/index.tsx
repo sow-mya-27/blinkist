@@ -35,11 +35,16 @@ const useStyles = makeStyles({
 });
 
 const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
-  const [value, setValue] = useState("");
+  const [input, setInput] = useState("");
 
   const classes = useStyles();
   const navigate = useNavigate();
-
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val=e.target.value.toLowerCase()
+    setInput(val);
+    console.log(input)
+  };
+  
   return (
     <div className={classes.parent}>
       <div className={classes.root}>
@@ -50,7 +55,8 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
               sx={{ width: "658px" }}
               placeholder="Search by title or author"
               id="input-with-icon-adornment"
-              value={value}
+              value={input}
+              onChange={handleChange}
               startAdornment={
                 <InputAdornment position="start">
                   <Search />
@@ -59,7 +65,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
             />
           </FormControl>
         </div>
-        <div className={classes.text}>
+        {input==="" ? (<div><div className={classes.text}>
           <Text
             variant={"caption"}
             text={"Trending blinks"}
@@ -123,7 +129,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
           <Text variant={"h1"} text={"Just added"} height={"18px"} />
           <Grid container spacing={2}>
             {props.book &&
-              props.book.map((d: any) => {
+              props.book.forEach((d: any) => {
                 if (d.just) {
                   return (
                     <Grid
@@ -190,8 +196,41 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                   </Grid>
                 ))}
           </Grid>
-        </Box>
-      </div>
+        </Box></div>)
+      :<Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            {props.book &&
+              props.book
+                .filter((d: any) => d.authorName.toLowerCase().includes(input) || d.cardName.toLowerCase().includes(input))
+                .map((d: any) => (
+                  <Grid
+                    item
+                    xs={2}
+                    sm={4}
+                    md={4}
+                    key={d.id}
+                    className={classes.root}
+                  >
+                    {d.startedBook ? (
+                      <div
+                        onClick={() => {
+                          navigate("/enterpreuner/bookdetails", {
+                            state: d.id,
+                          });
+                        }}
+                      >
+                        <BookCard
+                          mode={"non-hover"}
+                          bookName={d.cardName}
+                          authorName={d.authorName}
+                          src={d.src}
+                          time={d.timeStamp}
+                          read={d.reads}
+                          status={d.isread}
+                        /></div>):(<></>)}
+                      </Grid>))}
+                      </Grid></Box>  }
+        </div>
     </div>
   );
 };

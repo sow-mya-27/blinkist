@@ -34,7 +34,9 @@ const useStyles = makeStyles({
   },
   time: {
     height: "18px",
-    paddingTop: "17px",
+    marginTop: "27px",
+    paddingTop:"17px",
+    marginBottom:"0px",
     color: "#6D787E",
     display: "flex",
   },
@@ -44,7 +46,7 @@ const useStyles = makeStyles({
     width: "284px",
     height: "466px",
     borderRadius: "8px",
-    marginBottom: "25px",
+    marginBottom: "50px",
     borderBottom: "none",
   },
 
@@ -97,8 +99,9 @@ const Card = (props: MyProps) => {
           <Text
             variant="subtitle1"
             text={props.bookName}
-            height={"16px"}
+            height={"18px"}
             color="#03314B"
+            width="225px"
           />
         </div>
         <div className={classes.author}>
@@ -108,7 +111,7 @@ const Card = (props: MyProps) => {
           <AccessTimeIcon
             sx={{ paddingLeft: "17.67px", height: "16px", width: "16px" }}
           />
-          <Text variant="caption" text={props.time} height={"13px"} />
+          <Text variant="caption3" text={props.time} height={"13px"} />
           {readStatus}
         </div>
       </div>

@@ -36,7 +36,7 @@ const Banner = () => {
             height={"35px"}
             width="300px"
           ></Text>
-          <div style={{ width: "420px", paddingTop: "15px" }}>
+          <div style={{ width: "500px", paddingTop: "15px" }}>
             <Text
               variant={"subtitle2"}
               text={
