@@ -1,7 +1,5 @@
 import Icons from ".";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-// import Icons from ".";
-import { Search } from "@mui/icons-material";
+import { ComponentStory } from "@storybook/react";
 export default {
   title: "atoms/icons",
   component: Icons,

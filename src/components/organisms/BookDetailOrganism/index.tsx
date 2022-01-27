@@ -1,10 +1,9 @@
 import { Button } from "@material-ui/core";
 import { makeStyles } from "@mui/styles";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import Details from "../../molecules/BookDetail";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Text from "../../atoms/text";
 
 const useStyles = makeStyles({
@@ -21,11 +20,17 @@ const useStyles = makeStyles({
   buttonStyle: {
     width: "200px",
     textAlign: "left",
+    color:'black'
   },
   buttonStyle2: {
-    width: "170px",
-    textAlign: "left",
+    width: "200px",
     height: "44px",
+    margin: "5px",
+    borderRadius: "5px",
+    fontSize: "14px",
+    "&:hover": {
+       color: "white",
+       backgroundColor: "#22C870"}
   },
   finishedButton: {
     width: "170px",
@@ -74,12 +79,12 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
     timeStamp = "";
 
   if (props.book[id]) {
-    src1 = props.book[id].src;
-    console.log(src1);
+    src1 = props.book[id].src 
     bookName = props.book[id].cardName;
     authorName = props.book[id].authorName;
     timeStamp = props.book[id].timeStamp;
   }
+  console.log(bookName)
   const [button, setButton] = useState("synopsis");
   const handleFinish = () => {
     props.book[id].status = false;
@@ -88,54 +93,40 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
     props.book[id].status = true;
   };
   return (
+    
     <div className={classes.root}>
       <div className={classes.flexDiv}>
-        <Details
+        
+        {src1 && <Details
           book={props.book}
           setData={props.setData}
           src={src1}
           bookName={bookName}
           authorName={authorName}
           timeStamp={timeStamp}
-        ></Details>
+        ></Details>}
         <div>
           <div>
-            <Button
-              className={classes.buttonStyle2}
+          <Button className={classes.buttonStyle2}
               variant="outlined"
-              onClick={handleRead}
-            >
-              <Text
-                variant={"body1"}
-                text={"Read Now"}
-                height={"14px"}
-                color="#22C870"
-              ></Text>
+              
+            onClick={handleRead}>
+              Read Now
             </Button>
+            
             <Button
               className={classes.finishedButton}
               variant="text"
               onClick={handleFinish}
-            >
-              <Text
-                variant={"body1"}
-                text={"Finished Reading"}
-                height={"14px"}
-                color="black"
-                width="170px"
-              ></Text>
+            >Finished Reading
+              
             </Button>
             <Button
               className={classes.buttonStyle2}
               variant="text"
               endIcon={<ArrowForwardOutlinedIcon />}
               onClick={() => navigate("/")}
-            >
-              <Text
-                variant={"body1"}
-                text={"Send to Kindle"}
-                height={"14px"}
-              ></Text>
+            >Send to Kindle
             </Button>
           </div>
           <div style={{ paddingTop: "72px" }}>
@@ -245,7 +236,7 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
           <div style={{ paddingBottom: "257px" }}>
             {button === "synopsis" ? (
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text={
                   bookName +
                   "(2020) updates " +
@@ -261,7 +252,7 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
             )}
             {button === "who" ? (
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text="any one who are interested in Entrepreneurship"
                 height={"16px"}
                 width="600px"
@@ -272,7 +263,7 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
             )}
             {button === "about" ? (
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text={authorName}
                 height={"16px"}
                 width="600px"
@@ -287,6 +278,8 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
           <div style={{ color: success }}>hi</div>
         </ThemeProvider> */}
       </div>
+      <img src={src1} key={src1} alt="card"/>
+      
     </div>
   );
 };

@@ -7,14 +7,15 @@ export default {
 };
 const Template: ComponentStory<typeof Details> = (args) => (
   <Details
-    book={[]}
-    setData={undefined}
-    src={"assets/biggboss.png"}
-    bookName={"Being Boss"}
-    authorName={"Kathleen Shannon and Emily..."}
-    timeStamp={"13-minute read"}
+    {...args}
   />
 );
 
 export const details = Template.bind({});
-details.args = {};
+details.args = {
+    setData:undefined,
+    src:"assets/biggboss.png",
+    bookName:"Being Boss",
+    authorName:"Kathleen Shannon and Emily...",
+    timeStamp:"13-minute read"
+};

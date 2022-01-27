@@ -24,13 +24,16 @@ const Details = (props: {
   authorName: string;
   timeStamp: string;
 }) => {
+  console.log(props.src)
+  const [,src2]=props.src.split("/")
+  const [src3]=src2.split(".")
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.text}>
         <div style={{ paddingBottom: "40px" }}>
           <Text
-            variant={"body2"}
+            variant={"body1"}
             text={"Get the key ideas from"}
             height={"16px"}
             color="#03314B"
@@ -69,12 +72,12 @@ const Details = (props: {
           color="#6D787E"
         ></Text>
       </div>
-      {console.log(typeof props.src)}
-      <img src={props.src} />
+      
       <div style={{ paddingTop: "40px" }}>
-        <Image src={props.src} height={304} width={304}></Image>
+        <Image src={`/assets/${src3}.png`} height={304} width={304}></Image>
       </div>
     </div>
+    
   );
 };
 export default Details;

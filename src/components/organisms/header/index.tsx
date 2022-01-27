@@ -3,7 +3,6 @@ import Image from "../../atoms/images";
 import SearchIcon from "@mui/icons-material/Search";
 import Text from "../../atoms/text";
 import Icons from "../../atoms/icons";
-import Button from "@mui/material/Button";
 import { Fab } from "@material-ui/core";
 import { makeStyles } from "@mui/styles";
 import HeaderPopUp from "../headerPopup/index";
@@ -42,6 +41,7 @@ const Header = () => {
       justifyContent: "space-between",
       alignItems: "center",
       width: "422px",
+      color:"#03314B"
     },
     parent: {
       display: "flex",
@@ -53,6 +53,10 @@ const Header = () => {
       width: "920px",
       alignItems: "center",
     },
+    blur:{
+      backgroundColor:"rgba(157, 163, 166, 0.45);",
+      height:"100vh"
+    }
   });
   const classes = useStyles();
 
@@ -73,26 +77,29 @@ const Header = () => {
               <div
                 style={{
                   display: "flex",
-                  width: "70px",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  width: "100px",
+                  alignItems: "flex-end",
+                  justifyContent: "space-around",paddingBottom:"10px"
                 }}
                 onClick={() => (click ? setClick(false) : setClick(true))}
               >
+                
                 <Text
-                  variant={"body1"}
+                  variant={"body1black"}
                   text={"Explore"}
                   height={"16px"}
                   color="black"
                 />
-                {click ? icondown : iconup}
+                <div>{click ? icondown : iconup}</div>
+                
               </div>
+              <div style={{paddingBottom:"10px"}}>
               <Text
-                variant={"body1"}
+                variant={"body1black"}
                 text={"My Library"}
                 height={"16px"}
                 color="black"
-              />
+              /></div>
             </div>
             <div>
               <Fab size="small" color="primary">
@@ -109,7 +116,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {click ? <HeaderPopUp /> : <div></div>}
+      {click ? <div className={classes.blur}><HeaderPopUp /></div> : <div></div>}
     </div>
   );
 };

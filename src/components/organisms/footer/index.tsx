@@ -48,7 +48,8 @@ const Footer = () => {
                 //   variant="subtit  le1"
                 text={"Big ideas in small packages "}
                 height={"24px"}
-                variant={"subtitle2"}
+                variant={"subtitle3Blue"}
+                color="#0365F2"
               ></Text>
             </div>
             <div style={{ color: "#0365F2", fontWeight: 500 }}>
@@ -56,7 +57,8 @@ const Footer = () => {
                 //   variant="subtit  le1"
                 text={" Start learning now"}
                 height={"24px"}
-                variant={"subtitle2"}
+                variant={"subtitle3Blue"}
+                color="#0365F2"
               ></Text>
             </div>
           </div>

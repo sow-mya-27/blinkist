@@ -1,5 +1,4 @@
 import React from "react";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Text from "../../atoms/text";
 import { AccessTime } from "@mui/icons-material";
 

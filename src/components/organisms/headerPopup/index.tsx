@@ -5,7 +5,7 @@ import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 import Button from "@mui/material/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScienceOutlinedIcon from "@mui/icons-material/ScienceOutlined";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import {
   faGlobe,
   faMonument,
@@ -33,6 +33,7 @@ const HeaderPopUp = () => {
       width: "1200px",
       height: "398px",
       zIndex: "10",
+      
     },
     flex: {
       display: "flex",
@@ -47,11 +48,15 @@ const HeaderPopUp = () => {
       height: "304px",
     },
     parent: {
-      backgroundColor: "#F1F6F4 ",
-
+      // backgroundColor: "#F1F6F4 ",
+      height:"100vh",
       display: "flex",
       justifyContent: "center",
     },
+    button:{
+      color:"#6D787E",
+      "&hover:":{color:"#0365F2"},textTransform:"capitalize",
+    }
   });
   const classes = useStyles();
   return (
@@ -59,7 +64,7 @@ const HeaderPopUp = () => {
       <div className={classes.root}>
         <div className={classes.flex}>
           <Text
-            variant={"subtitle1"}
+            variant={"subtitle3Blue"}
             text={"Explore by category"}
             height={"16px"}
             width="188px"
@@ -89,29 +94,24 @@ const HeaderPopUp = () => {
         />
         <div className={classes.flex}>
           <div className={classes.flexCol}>
-            <Button
+            <Button className={classes.button}
               variant="text"
               startIcon={<RocketOutlinedIcon sx={{ color: "#0365F2" }} />}
               onClick={() => navigate("/enterpreuner")}
-            >
-              <Text
-                variant={"body2"}
-                text={"Entrepreneurship"}
-                height={""}
-                color="#0365F2"
-              ></Text>
+            >Entrepreneurship
+             
             </Button>
             <Button
               variant="text"
               startIcon={<ScienceOutlinedIcon sx={{ color: "#6D787E" }} />}
             >
-              <Text variant={"body2"} text={"Science"} height={""} />
+              <Text variant={"body1"} text={"Science"} height={""} />
             </Button>
             <Button
               variant="text"
               startIcon={<FontAwesomeIcon icon={faGlobe} color="#6D787E" />}
             >
-              <Text variant={"body2"} text={"Economics"} height={""} />
+              <Text variant={"body1"} text={"Economics"} height={""} />
             </Button>
             <Button
               variant="text"
@@ -119,7 +119,7 @@ const HeaderPopUp = () => {
                 <BusinessCenterOutlinedIcon sx={{ color: "#6D787E" }} />
               }
             >
-              <Text variant={"body2"} text={"Corporate Culture"} height={""} />
+              <Text variant={"body1"} text={"Corporate Culture"} height={""} />
             </Button>
             <Button
               variant="text"
@@ -130,7 +130,7 @@ const HeaderPopUp = () => {
                 />
               }
             >
-              <Text variant={"body2"} text={"Psychology"} height={""} />
+              <Text variant={"body1"} text={"Psychology"} height={""} />
             </Button>
             <Button
               variant="text"
@@ -139,7 +139,7 @@ const HeaderPopUp = () => {
               }
             >
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text={"Nature & Environment"}
                 height={""}
               />
@@ -150,26 +150,26 @@ const HeaderPopUp = () => {
               variant="text"
               startIcon={<FontAwesomeIcon icon={faLandmark} color="#6D787E" />}
             >
-              <Text variant={"body2"} text={"Politics"} height={""} />
+              <Text variant={"body1"} text={"Politics"} height={""} />
             </Button>
             <Button
               variant="text"
               startIcon={<FontAwesomeIcon icon={faHospital} color="#6D787E" />}
             >
-              <Text variant={"body2"} text={"Health & Nutrition"} height={""} />
+              <Text variant={"body1"} text={"Health & Nutrition"} height={""} />
             </Button>
             <Button
               variant="text"
               startIcon={<FontAwesomeIcon icon={faMonument} color="#6D787E" />}
             >
-              <Text variant={"body2"} text={"History"} height={""} />
+              <Text variant={"body1"} text={"History"} height={""} />
             </Button>
             <Button
               variant="text"
               startIcon={<EmojiObjectsOutlinedIcon sx={{ color: "#6D787E" }} />}
             >
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text={"Motivation & Inspiration"}
                 height={""}
               />
@@ -180,7 +180,7 @@ const HeaderPopUp = () => {
                 <FontAwesomeIcon icon={faHourglassEnd} color="#6D787E" />
               }
             >
-              <Text variant={"body2"} text={"Productivity"} height={""} />
+              <Text variant={"body1"} text={"Productivity"} height={""} />
             </Button>
             <Button
               variant="text"
@@ -188,7 +188,7 @@ const HeaderPopUp = () => {
                 <FontAwesomeIcon icon={faBullseye} color="#6D787E" size="2x" />
               }
             >
-              <Text variant={"body2"} text={"Career & Success"} height={""} />
+              <Text variant={"body1"} text={"Career & Success"} height={""} />
             </Button>
           </div>
 
@@ -197,7 +197,7 @@ const HeaderPopUp = () => {
               variant="text"
               startIcon={<FontAwesomeIcon icon={faChartLine} color="#6D787E" />}
             >
-              <Text variant={"body2"} text={"Marketing & Sales"} height={""} />
+              <Text variant={"body1"} text={"Marketing & Sales"} height={""} />
             </Button>
             <Button
               variant="text"
@@ -206,7 +206,7 @@ const HeaderPopUp = () => {
               }
             >
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text={"Personal Development"}
                 height={""}
               />
@@ -218,7 +218,7 @@ const HeaderPopUp = () => {
               }
             >
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text={"Communication Skills"}
                 height={""}
               />
@@ -230,7 +230,7 @@ const HeaderPopUp = () => {
               }
             >
               <Text
-                variant={"body2"}
+                variant={"body1"}
                 text={"Money & Investments"}
                 height={""}
               />
@@ -241,13 +241,13 @@ const HeaderPopUp = () => {
                 <FavoriteBorderOutlinedIcon sx={{ color: "#6D787E" }} />
               }
             >
-              <Text variant={"body2"} text={"Sex & Relationship"} height={""} />
+              <Text variant={"body1"} text={"Sex & Relationship"} height={""} />
             </Button>
             <Button
               variant="text"
               startIcon={<SchoolOutlinedIcon sx={{ color: "#6D787E" }} />}
             >
-              <Text variant={"body2"} text={"Education"} height={""} />
+              <Text variant={"body1"} text={"Education"} height={""} />
             </Button>
           </div>
         </div>

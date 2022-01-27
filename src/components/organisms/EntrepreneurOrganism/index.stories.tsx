@@ -7,10 +7,6 @@ export default {
   component: EntrepreneurOrganism,
 };
 
-// export const entrepreneurOrganism = (
-//   <EntrepreneurOrganism book={[]} setData={undefined} />
-// );
-
 const template: ComponentStory<typeof EntrepreneurOrganism> = (args) => (
   <Router>
     <EntrepreneurOrganism book={undefined} setData={undefined} />

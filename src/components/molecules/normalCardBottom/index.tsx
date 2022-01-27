@@ -11,6 +11,7 @@ const Normal = () => {
       justifyContent: "space-between",
       height: "52px",
       width: "284px",
+      // backgroundColor:"red"
       // marginBottom: "50px",
     },
     flex: { display: "flex" },
@@ -31,6 +32,7 @@ const Normal = () => {
       <MoreHorizIcon
         sx={{ paddingLeft: "247px", color: "#042330" }}
       ></MoreHorizIcon>
+      
       <LinearProgress
         value={30}
         sx={{
@@ -49,6 +51,7 @@ const Normal = () => {
         <div className={classes.first}></div>
         <div className={classes.second}></div>
       </div>
+      
     </div>
   );
 };

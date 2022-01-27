@@ -1,6 +1,5 @@
 import React from "react";
 import BookDetailOrganism from "../../organisms/BookDetailOrganism";
-import EntrepreneurOrganism from "../../organisms/EntrepreneurOrganism";
 import Footer from "../../organisms/footer";
 import Header from "../../organisms/header";
 import EntrepreneurTemplate from "../../templates/EntrepreneurTemplate";

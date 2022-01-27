@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import MyLibrary from "./components/pages/MyLibrary";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import Entrepreneurship from "./components/pages/enterpreuner";
 import BookDetailPage from "./components/pages/BookDetailPage";
 type data = {
@@ -17,13 +17,7 @@ type data = {
 function App() {
   const [bookData, setBookData] = useState<data[]>([]);
   useEffect(() => {
-    // fetch("http://localhost:8000/Data")
-    //   .then((res) => {
-    //     return res.json();
-    //   })
-    //   .then((data) => {
-    //     setBookData(data);
-    //   });
+    
     const axios = require("axios").default;
 
     axios({
@@ -36,7 +30,6 @@ function App() {
       .catch((error: any) => console.log(error));
   }, []);
   return (
-    // <BrowserRouter>
     <Routes>
       <Route
         path="/"
@@ -61,7 +54,6 @@ function App() {
         }
       />
     </Routes>
-    // </BrowserRouter>
   );
 }
 export default App;
