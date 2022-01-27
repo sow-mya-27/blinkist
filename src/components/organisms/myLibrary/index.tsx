@@ -112,6 +112,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             {props.book &&
+              // eslint-disable-next-line array-callback-return
               props.book.map((d: any) => {
                 if (d.status) {
                   return (
