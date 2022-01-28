@@ -274,11 +274,7 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
             )}
           </div>
         </div>
-        {/* <ThemeProvider theme={typographyAtomStyles}>
-          <div style={{ color: success }}>hi</div>
-        </ThemeProvider> */}
       </div>
-      <img src={src1} key={src1} alt="card"/>
       
     </div>
   );

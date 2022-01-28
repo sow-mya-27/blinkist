@@ -54,6 +54,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
   }
   const navigate = useNavigate();
   const handleCLick=(d:any)=>{
+    console.log("hi")
                             navigate("/enterpreuner/bookdetails", {
                               state: d.id,
                             });}
@@ -125,7 +126,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                        <div onClick={(d) => handleCLick}>
+                        <div onClick={()=>handleCLick(d)}>
                           <BookCard
                             mode={"normal"}
                             bookName={d.cardName}
@@ -151,7 +152,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                        <div onClick={(d) => handleCLick}>
+                        <div onClick={ ()=>handleCLick(d)}>
                           <BookCard
                             mode={"read again"}
                             bookName={d.cardName}
@@ -176,7 +177,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                       key={d.id}
                       className={classes.root}
                     >
-                      <div onClick={(d) => handleCLick}>
+                      <div onClick={()=> handleCLick(d)}>
                       
                         <BookCard
                           mode={"finished"}

@@ -84,7 +84,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
               props.book
                 .filter((d: any) => !d.just && !d.audio)
                 .map((d: any) => (
-                  <Grid onClick={(d)=>clickHandler}
+                  <Grid  onClick={()=>clickHandler(d)}
                     item
                     xs={2}
                     sm={4}
@@ -93,7 +93,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                     className={classes.root}
                   >
                     {d.startedBook ? (
-                      <div
+                      <div 
                         
                       >
                         <BookCard
@@ -126,35 +126,33 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
           </Grid>
           <Text variant={"h1"} text={"Just added"} height={"18px"} />
           <Grid container spacing={2}>
-            {props.book &&
-              props.book.forEach((d: any) => {
-                if (d.just) {
-                  return (
-                    <Grid
-                      item
-                      xs={2}
-                      sm={4}
-                      md={4}
-                      key={d.id}
-                      className={classes.root}
+          {props.book &&
+              props.book
+                .filter((d: any) => d.just)
+                .map((d: any) => (
+                  <Grid
+                    item
+                    xs={2}
+                    sm={4}
+                    md={4}
+                    key={d.id}
+                    className={classes.root}
+                  >
+                    <div
+                      onClick={()=>clickHandler(d)}
                     >
-                      <div
-                        onClick={(d)=>clickHandler}
-                      >
-                        <BookCard
-                          mode={"non-hover"}
-                          bookName={d.cardName}
-                          authorName={d.authorName}
-                          src={d.src}
-                          time={d.timeStamp}
-                          read={d.reads}
-                          status={d.isread}
-                        />
-                      </div>
-                    </Grid>
-                  );
-                }
-              })}
+                      <BookCard
+                        mode={"non-hover"}
+                        bookName={d.cardName}
+                        authorName={d.authorName}
+                        src={d.src}
+                        time={d.timeStamp}
+                        read={d.reads}
+                        status={d.isread}
+                      />
+                    </div>
+                  </Grid>
+                ))}
           </Grid>
           <Text variant={"h1"} text={"Featured audio blinks"} height={"18px"} />
           <Grid container spacing={2}>
@@ -171,7 +169,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                     className={classes.root}
                   >
                     <div
-                      onClick={(d)=>clickHandler}
+                      onClick={()=>clickHandler(d)}
                     >
                       <BookCard
                         mode={"non-hover"}
@@ -203,7 +201,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                   >
                     {d.startedBook ? (
                       <div
-                        onClick={(d)=>clickHandler}
+                        onClick={()=>clickHandler(d)}
                       >
                         <BookCard
                           mode={"non-hover"}
