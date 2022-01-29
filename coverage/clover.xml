@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643438259985" clover="3.2.0">
-  <project timestamp="1643438259985" name="All files">
-    <metrics statements="169" coveredstatements="165" conditionals="80" coveredconditionals="74" methods="53" coveredmethods="50" elements="302" coveredelements="289" complexity="0" loc="169" ncloc="169" packages="22" files="22" classes="22"/>
+<coverage generated="1643471884037" clover="3.2.0">
+  <project timestamp="1643471884037" name="All files">
+    <metrics statements="168" coveredstatements="165" conditionals="84" coveredconditionals="78" methods="52" coveredmethods="50" elements="304" coveredelements="293" complexity="0" loc="168" ncloc="168" packages="20" files="20" classes="20"/>
     <package name="atoms.icons">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/atoms/icons/index.tsx">
@@ -24,9 +24,9 @@
       <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/atoms/text/index.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="14" count="14" type="stmt"/>
-        <line num="15" count="504" type="stmt"/>
-        <line num="23" count="504" type="stmt"/>
-        <line num="24" count="504" type="stmt"/>
+        <line num="15" count="508" type="stmt"/>
+        <line num="23" count="508" type="stmt"/>
+        <line num="24" count="508" type="stmt"/>
       </file>
     </package>
     <package name="molecules.BookDetail">
@@ -114,9 +114,9 @@
       </file>
     </package>
     <package name="organisms.BookDetailOrganism">
-      <metrics statements="30" coveredstatements="29" conditionals="20" coveredconditionals="19" methods="8" coveredmethods="8"/>
+      <metrics statements="32" coveredstatements="31" conditionals="20" coveredconditionals="19" methods="9" coveredmethods="9"/>
       <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/BookDetailOrganism/index.tsx">
-        <metrics statements="30" coveredstatements="29" conditionals="20" coveredconditionals="19" methods="8" coveredmethods="8"/>
+        <metrics statements="32" coveredstatements="31" conditionals="20" coveredconditionals="19" methods="9" coveredmethods="9"/>
         <line num="9" count="3" type="stmt"/>
         <line num="69" count="3" type="stmt"/>
         <line num="73" count="13" type="stmt"/>
@@ -143,10 +143,12 @@
         <line num="103" count="13" type="stmt"/>
         <line num="104" count="1" type="stmt"/>
         <line num="106" count="13" type="stmt"/>
-        <line num="140" count="1" type="stmt"/>
-        <line num="150" count="1" type="stmt"/>
-        <line num="159" count="1" type="stmt"/>
-        <line num="168" count="1" type="stmt"/>
+        <line num="107" count="39" type="stmt"/>
+        <line num="117" count="13" type="stmt"/>
+        <line num="151" count="1" type="stmt"/>
+        <line num="161" count="1" type="stmt"/>
+        <line num="170" count="1" type="stmt"/>
+        <line num="179" count="1" type="stmt"/>
       </file>
     </package>
     <package name="organisms.EntrepreneurOrganism">
@@ -180,13 +182,18 @@
       </file>
     </package>
     <package name="organisms.footer">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/footer/index.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="5" count="5" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
         <line num="35" count="4" type="stmt"/>
-        <line num="36" count="4" type="stmt"/>
+        <line num="36" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="44" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="12" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
       </file>
     </package>
     <package name="organisms.header">
@@ -218,9 +225,9 @@
       </file>
     </package>
     <package name="organisms.myLibrary">
-      <metrics statements="26" coveredstatements="25" conditionals="26" coveredconditionals="25" methods="8" coveredmethods="7"/>
+      <metrics statements="26" coveredstatements="26" conditionals="26" coveredconditionals="25" methods="7" coveredmethods="7"/>
       <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/myLibrary/index.tsx">
-        <metrics statements="26" coveredstatements="25" conditionals="26" coveredconditionals="25" methods="8" coveredmethods="7"/>
+        <metrics statements="26" coveredstatements="26" conditionals="26" coveredconditionals="25" methods="7" coveredmethods="7"/>
         <line num="8" count="3" type="stmt"/>
         <line num="39" count="3" type="stmt"/>
         <line num="40" count="10" type="stmt"/>
@@ -234,19 +241,19 @@
         <line num="56" count="3" type="stmt"/>
         <line num="57" count="3" type="stmt"/>
         <line num="61" count="9" type="stmt"/>
-        <line num="77" count="1" type="stmt"/>
-        <line num="78" count="1" type="stmt"/>
-        <line num="104" count="1" type="stmt"/>
-        <line num="105" count="1" type="stmt"/>
-        <line num="151" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="152" count="8" type="stmt"/>
-        <line num="163" count="1" type="stmt"/>
-        <line num="180" count="16" type="cond" truecount="4" falsecount="0"/>
-        <line num="181" count="2" type="stmt"/>
-        <line num="192" count="0" type="stmt"/>
-        <line num="209" count="14" type="cond" truecount="3" falsecount="1"/>
-        <line num="210" count="14" type="stmt"/>
-        <line num="220" count="2" type="stmt"/>
+        <line num="62" count="23" type="stmt"/>
+        <line num="71" count="3" type="stmt"/>
+        <line num="85" count="9" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="128" count="1" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="175" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="176" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="178" count="16" type="cond" truecount="4" falsecount="0"/>
+        <line num="179" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="181" count="14" type="cond" truecount="3" falsecount="1"/>
+        <line num="182" count="14" type="stmt"/>
       </file>
     </package>
     <package name="pages.BookDetailPage">
@@ -273,34 +280,14 @@
         <line num="18" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="templates.BookDetailTemplate">
+    <package name="templates.parent template">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/templates/BookDetailTemplate/index.tsx">
+      <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/templates/parent template/index.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="templates.EntrepreneurTemplate">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/templates/EntrepreneurTemplate/index.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="templates.HomePage">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="index.tsx" path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/templates/HomePage/index.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
       </file>
     </package>
   </project>

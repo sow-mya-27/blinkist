@@ -58,6 +58,30 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
       state: d.id,
     });
   };
+  const gridFunction = (mode: string, d: any) => {
+    return (
+      <Grid
+        item
+        xs={2}
+        sm={4}
+        md={4}
+        key={d.id}
+        className={classes.root}
+      >
+        <div onClick={() => handleCLick(d)} data-testid="grid">
+          <BookCard
+            mode={mode}
+            bookName={d.cardName}
+            authorName={d.authorName}
+            src={d.src}
+            time={d.timeStamp}
+            read={d.reads}
+            status={d.isread}
+          />
+        </div>
+      </Grid>
+    );
+  };
   return (
     <div className={classes.parent}>
       <div className={classes.root}>
@@ -149,89 +173,13 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               // eslint-disable-next-line array-callback-return
               props.book.map((d: any) => {
                 if (d.status) {
-                  return (
-                    currently && (
-                      <Grid
-                        item
-                        xs={2}
-                        sm={4}
-                        md={4}
-                        key={d.id}
-                        className={classes.root}
-                      >
-                        <div
-                          onClick={() => handleCLick(d)}
-                          data-testid="grid"
-                        >
-                          <BookCard
-                            mode={'normal'}
-                            bookName={d.cardName}
-                            authorName={d.authorName}
-                            src={d.src}
-                            time={d.timeStamp}
-                            read={d.reads}
-                            status={d.isread}
-                          />
-                        </div>
-                      </Grid>
-                    )
-                  );
+                  return currently && gridFunction('normal', d);
                 }
                 if (!d.status && finished) {
-                  return (
-                    finished && (
-                      <Grid
-                        item
-                        xs={2}
-                        sm={4}
-                        md={4}
-                        key={d.id}
-                        className={classes.root}
-                      >
-                        <div
-                          onClick={() => handleCLick(d)}
-                          data-testid="grid"
-                        >
-                          <BookCard
-                            mode={'read again'}
-                            bookName={d.cardName}
-                            authorName={d.authorName}
-                            src={d.src}
-                            time={d.timeStamp}
-                            read={d.reads}
-                            status={d.isread}
-                          />
-                        </div>
-                      </Grid>
-                    )
-                  );
+                  return finished && gridFunction('read again', d);
                 }
                 if (!d.status && currently) {
-                  return (
-                    <Grid
-                      item
-                      xs={2}
-                      sm={4}
-                      md={4}
-                      key={d.id}
-                      className={classes.root}
-                    >
-                      <div
-                        onClick={() => handleCLick(d)}
-                        data-testid="grid"
-                      >
-                        <BookCard
-                          mode={'finished'}
-                          bookName={d.cardName}
-                          authorName={d.authorName}
-                          src={d.src}
-                          time={d.timeStamp}
-                          read={d.reads}
-                          status={d.isread}
-                        />
-                      </div>
-                    </Grid>
-                  );
+                  return gridFunction('finished', d);
                 }
               })}
           </Grid>

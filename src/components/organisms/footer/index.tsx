@@ -32,6 +32,29 @@ const Footer = () => {
       marginTop: '50px',
     },
   });
+  const text = (data: string[], variant: string) => {
+    if (variant === 'subtitle3Blue') {
+      return (
+        <div>
+          <Text variant={'subtitle3Blue'} text={data[0]}></Text>
+          <Text variant={'subtitle3Blue'} text={data[1]}></Text>
+        </div>
+      );
+    }
+    if (variant === 'body1') {
+      return (
+        <div>
+          <Text variant={'body1'} text={data[0]}></Text>
+          <br />
+          <Text variant={'body3'} text={data[1]}></Text>
+          <Text variant={'body3'} text={data[2]}></Text>
+          <Text variant={'body3'} text={data[3]}></Text>
+          <Text variant={'body3'} text={data[4]}></Text>
+          <Text variant={'body3'} text={data[5]}></Text>
+        </div>
+      );
+    }
+  };
   const classes = useStyles();
   return (
     <div className={classes.parent}>
@@ -43,132 +66,64 @@ const Footer = () => {
               height={100}
               width={124.09}
             ></Image>
-            <div style={{ color: '#0365F2', fontWeight: 500 }}>
-              <Text
-                //   variant="subtit  le1"
-                text={'Big ideas in small packages '}
-                height={'24px'}
-                variant={'subtitle3Blue'}
-                color="#0365F2"
-              ></Text>
-            </div>
-            <div style={{ color: '#0365F2', fontWeight: 500 }}>
-              <Text
-                //   variant="subtit  le1"
-                text={' Start learning now'}
-                height={'24px'}
-                variant={'subtitle3Blue'}
-                color="#0365F2"
-              ></Text>
+            {text(
+              ['Big ideas in small packages', 'Start learning now'],
+              'subtitle3Blue',
+            )}
+          </div>
+          <div>
+            <div className={classes.body1}>
+              {text(
+                [
+                  'Editorial',
+                  'Book Lists',
+                  'What is Nonfiction?',
+                  'What to read next?',
+                  'Benefits of reading',
+                  '',
+                ],
+                'body1',
+              )}
             </div>
           </div>
           <div>
             <div className={classes.body1}>
-              <Text
-                variant={'body1'}
-                text={'Editorial'}
-                height={'16px'}
-              ></Text>
-            </div>
-            <div style={{ paddingTop: '20px' }}>
-              <Text
-                variant={'body2'}
-                text={'Book Lists'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'What is Nonfiction?'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'What to read next?'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'Benefits of reading'}
-                height={'16px'}
-              ></Text>
+              {text(
+                [
+                  'Useful links',
+                  'Pricing',
+                  'Blinkist Business',
+                  'Gift cards',
+                  'Blinkist maganine',
+                  'Contact & help',
+                ],
+                'body1',
+              )}
             </div>
           </div>
           <div>
             <div className={classes.body1}>
-              <Text
-                variant={'body1'}
-                text={'Useful links'}
-                height={'16px'}
-              ></Text>
-            </div>
-            <div style={{ paddingTop: '20px' }}>
-              <Text
-                variant={'body2'}
-                text={'Pricing'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'Blinkist Business'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'Gift cards'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'Blinkist maganine'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'Contact & help'}
-                height={'16px'}
-              ></Text>
-            </div>
-          </div>
-          <div>
-            <div className={classes.body1}>
-              <Text
-                variant={'body1'}
-                text={'Company'}
-                height={'16px'}
-              ></Text>
-            </div>
-            <div style={{ paddingTop: '20px' }}>
-              <Text
-                variant={'body2'}
-                text={'About'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'Careers'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'partners'}
-                height={'16px'}
-              ></Text>
-              <Text
-                variant={'body2'}
-                text={'Code of Conduct'}
-                height={'16px'}
-              ></Text>
+              {text(
+                [
+                  'Company',
+                  'About',
+                  'Careers',
+                  'partners',
+                  'Code of Conduct',
+                  '',
+                ],
+                'body1',
+              )}
             </div>
           </div>
         </div>
         <div className={classes.gamma}>
-          <Text
-            variant={'caption'}
-            text={
-              '© Blinkist 2021 Sitemap   |   Imprint   |   Terms of Service   |   Privacy Policies'
-            }
-            height={'14px'}
-          ></Text>
+          {text(
+            [
+              '© Blinkist 2021 Sitemap   |   Imprint   |   Terms of Service   |   Privacy Policies',
+            ],
+            'caption',
+          )}
         </div>
       </div>
     </div>

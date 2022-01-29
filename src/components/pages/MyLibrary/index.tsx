@@ -1,7 +1,7 @@
 import Footer from '../../organisms/footer';
 import Header from '../../organisms/header';
 import MyLibraryTemplate from '../../organisms/myLibrary';
-import HomePageTemplate from '../../templates/HomePage';
+import ParentTemplate from '../../templates/parent template/index';
 
 type data = {
   src: string;
@@ -16,7 +16,7 @@ type data = {
 const MyLibrary = (props: { book: data[]; setData: any }) => {
   return (
     <div>
-      <HomePageTemplate
+      <ParentTemplate
         header={<Header></Header>}
         body={
           <MyLibraryTemplate

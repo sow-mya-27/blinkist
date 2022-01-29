@@ -2,7 +2,7 @@ import React from 'react';
 import BookDetailOrganism from '../../organisms/BookDetailOrganism';
 import Footer from '../../organisms/footer';
 import Header from '../../organisms/header';
-import EntrepreneurTemplate from '../../templates/EntrepreneurTemplate';
+import ParentTemplate from '../../templates/parent template/index';
 
 type data = {
   src: string;
@@ -16,7 +16,7 @@ type data = {
 };
 const BookDetailPage = (props: { book: data[]; setData: any }) => {
   return (
-    <EntrepreneurTemplate
+    <ParentTemplate
       header={<Header></Header>}
       body={
         <BookDetailOrganism

@@ -103,6 +103,17 @@ const BookDetailOrganism = (props: {
   const handleRead = () => {
     props.book[id].status = true;
   };
+  const hrFunction = (color: string) => {
+    return (
+      <hr
+        style={{
+          width: '200px',
+          height: '2px',
+          backgroundColor: color,
+        }}
+      ></hr>
+    );
+  };
   return (
     <div className={classes.root}>
       <div className={classes.flexDiv}>
@@ -178,57 +189,15 @@ const BookDetailOrganism = (props: {
               width: '600px',
             }}
           >
-            {button === 'synopsis' ? (
-              <hr
-                style={{
-                  width: '200px',
-                  height: '2px',
-                  backgroundColor: '#2CE080',
-                }}
-              ></hr>
-            ) : (
-              <hr
-                style={{
-                  width: '200px',
-                  height: '2px',
-                  backgroundColor: '#E1ECFC',
-                }}
-              ></hr>
-            )}
-            {button === 'who' ? (
-              <hr
-                style={{
-                  width: '200px',
-                  height: '2px',
-                  backgroundColor: '#2CE080',
-                }}
-              ></hr>
-            ) : (
-              <hr
-                style={{
-                  width: '200px',
-                  height: '2px',
-                  backgroundColor: '#E1ECFC',
-                }}
-              ></hr>
-            )}
-            {button === 'about' ? (
-              <hr
-                style={{
-                  width: '200px',
-                  height: '2px',
-                  backgroundColor: '#2CE080',
-                }}
-              ></hr>
-            ) : (
-              <hr
-                style={{
-                  width: '200px',
-                  height: '2px',
-                  backgroundColor: '#E1ECFC',
-                }}
-              ></hr>
-            )}
+            {button === 'synopsis'
+              ? hrFunction('#2CE080')
+              : hrFunction('#E1ECFC')}
+            {button === 'who'
+              ? hrFunction('#2CE080')
+              : hrFunction('#E1ECFC')}
+            {button === 'about'
+              ? hrFunction('#2CE080')
+              : hrFunction('#E1ECFC')}
           </div>
           <div style={{ paddingBottom: '257px' }}>
             {button === 'synopsis' ? (

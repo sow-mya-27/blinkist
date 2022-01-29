@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import React from 'react';
 
-const useStyles = makeStyles({
+export const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -21,12 +21,12 @@ const useStyles = makeStyles({
     width: '100%',
   },
 });
-type MyProps = {
+export type MyProps = {
   header: React.ReactNode;
   body: React.ReactNode;
   footer: React.ReactNode;
 };
-const EntrepreneurTemplate = (props: MyProps) => {
+const ParentTemplate = (props: MyProps) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -38,4 +38,4 @@ const EntrepreneurTemplate = (props: MyProps) => {
     </div>
   );
 };
-export default EntrepreneurTemplate;
+export default ParentTemplate;

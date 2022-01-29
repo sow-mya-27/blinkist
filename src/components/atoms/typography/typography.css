@@ -74,12 +74,12 @@
 .body3 {
   font-family: Cera Pro, sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 26px;
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   color: #353430;
   display: block;
+  text-transform: capitalize;
 }
 .caption1 {
   font-family: Cera Pro, sans-serif;
