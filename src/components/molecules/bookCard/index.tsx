@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Text from "../../atoms/text/index";
-import NonHoverLib from "../Button/index";
+import NonHoverLib from "../nonHoverButton/index";
 import Normal from "../normalCardBottom/index";
 import Finished from "../finished/index";
 import ReadAgain from "../ReadAgain/index";

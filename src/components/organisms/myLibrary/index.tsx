@@ -126,7 +126,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                        <div onClick={()=>handleCLick(d)}>
+                        <div onClick={()=>handleCLick(d)} data-testid="grid">
                           <BookCard
                             mode={"normal"}
                             bookName={d.cardName}
@@ -152,7 +152,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                        <div onClick={ ()=>handleCLick(d)}>
+                        <div onClick={ ()=>handleCLick(d)} data-testid="grid">
                           <BookCard
                             mode={"read again"}
                             bookName={d.cardName}
@@ -177,7 +177,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                       key={d.id}
                       className={classes.root}
                     >
-                      <div onClick={()=> handleCLick(d)}>
+                      <div onClick={()=> handleCLick(d)} data-testid="grid">
                       
                         <BookCard
                           mode={"finished"}

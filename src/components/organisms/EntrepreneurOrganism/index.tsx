@@ -20,18 +20,13 @@ const useStyles = makeStyles({
     position: "relative",
     paddingleft: "0px",
   },
-  buttonStyle: {
-    width: "284px",
-  },
+  buttonStyle: {width: "284px",},
   text: {
     paddingTop: "80px",
     paddingBottom: "25px",
     fontWeight: 700,
   },
-  search: {
-    width: "658px",
-    paddingTop: "61px",
-  },
+  search: {width: "658px",paddingTop: "61px",},
 });
 
 const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
@@ -45,22 +40,18 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
     console.log(input)
   };
   const clickHandler=(d:any)=>{
-    navigate("/enterpreuner/bookdetails", {
-                            state: d.id,
-                          });
-
+    navigate("/enterpreuner/bookdetails", {state: d.id,});
   }
   
   return (
     <div className={classes.parent}>
       <div className={classes.root}>
         <Banner></Banner>
-        <div className={classes.search}>
+        <div className={classes.search} data-testid='form'>
           <FormControl variant="standard">
-            <Input
+            <Input 
               sx={{ width: "658px" }}
               placeholder="Search by title or author"
-              id="input-with-icon-adornment"
               value={input}
               onChange={handleChange}
               startAdornment={
@@ -72,19 +63,14 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
           </FormControl>
         </div>
         {input==="" ? (<div><div className={classes.text}>
-          <Text
-            variant={"caption"}
-            text={"Trending blinks"}
-            height={"24px"}
-          ></Text>
-        </div>
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
-            {props.book &&
-              props.book
+          <Text variant={"caption"} text={"Trending blinks"} height={"24px"} ></Text>
+      </div>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+          {props.book && props.book
                 .filter((d: any) => !d.just && !d.audio)
                 .map((d: any) => (
-                  <Grid  onClick={()=>clickHandler(d)}
+                  <Grid  onClick={()=>clickHandler(d)} data-testid='grid'
                     item
                     xs={2}
                     sm={4}
@@ -130,7 +116,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
               props.book
                 .filter((d: any) => d.just)
                 .map((d: any) => (
-                  <Grid
+                  <Grid  onClick={()=>clickHandler(d)} data-testid='grid'
                     item
                     xs={2}
                     sm={4}
@@ -138,9 +124,6 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                     key={d.id}
                     className={classes.root}
                   >
-                    <div
-                      onClick={()=>clickHandler(d)}
-                    >
                       <BookCard
                         mode={"non-hover"}
                         bookName={d.cardName}
@@ -150,7 +133,6 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                         read={d.reads}
                         status={d.isread}
                       />
-                    </div>
                   </Grid>
                 ))}
           </Grid>
@@ -160,7 +142,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
               props.book
                 .filter((d: any) => d.audio)
                 .map((d: any) => (
-                  <Grid
+                  <Grid onClick={()=>clickHandler(d)} data-testid='grid'
                     item
                     xs={2}
                     sm={4}
@@ -168,9 +150,6 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                     key={d.id}
                     className={classes.root}
                   >
-                    <div
-                      onClick={()=>clickHandler(d)}
-                    >
                       <BookCard
                         mode={"non-hover"}
                         bookName={d.cardName}
@@ -180,7 +159,6 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                         read={d.reads}
                         status={d.isread}
                       />
-                    </div>
                   </Grid>
                 ))}
           </Grid>

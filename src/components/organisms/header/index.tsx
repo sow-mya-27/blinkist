@@ -66,8 +66,8 @@ const Header = () => {
         <div className={classes.root}>
           <div className={classes.child}>
             <div className={classes.innerDiv}>
-              <div onClick={() => navigate("/")}>
-                <Image
+              <div onClick={() => navigate("/")} data-testid='image'>
+                <Image 
                   height={100}
                   width={124.09}
                   src={"../../../../logo.png"}

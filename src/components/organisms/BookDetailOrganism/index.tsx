@@ -20,7 +20,14 @@ const useStyles = makeStyles({
   buttonStyle: {
     width: "200px",
     textAlign: "left",
-    color:'black'
+    fontFamily: "Cera Pro, sans-serif",
+  fontStyle: "normal",
+  fontWeight: "normal",
+  fontSize: "16px",
+  lineHeight: "20px",
+  color: "#6d787e",
+  marginTop: "14px",
+  textTransform:"capitalize"
   },
   buttonStyle2: {
     width: "200px",
@@ -136,13 +143,8 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
               onClick={() => {
                 setButton("synopsis");
               }}
-            >
-              <Text
-                variant={"body1"}
-                text={"Synopsis"}
-                height={"16px"}
-                color="#03314B"
-              ></Text>
+            >Synopsis
+              
             </Button>
             <Button
               className={classes.buttonStyle}
@@ -150,13 +152,8 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
               onClick={() => {
                 setButton("who");
               }}
-            >
-              <Text
-                variant={"body1"}
-                text={"Who is it for?"}
-                height={"16px"}
-                color="#03314B"
-              ></Text>
+            >Who is it for?
+           
             </Button>
             <Button
               className={classes.buttonStyle}
@@ -164,14 +161,8 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
               onClick={() => {
                 setButton("about");
               }}
-            >
-              <Text
-                variant={"body1"}
-                text={"About the author"}
-                height={"16px"}
-                color="#03314B"
-                width="200px"
-              ></Text>
+            >About the author
+              
             </Button>
           </div>
           <div
