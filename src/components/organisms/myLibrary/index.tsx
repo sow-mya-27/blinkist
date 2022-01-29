@@ -1,29 +1,29 @@
-import { makeStyles } from "@mui/styles";
-import BookCard from "../../molecules/bookCard/index";
-import Box from "@mui/material/Box";
-import { Button, Grid } from "@material-ui/core";
-import Text from "../../atoms/text/index";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { makeStyles } from '@mui/styles';
+import BookCard from '../../molecules/bookCard/index';
+import Box from '@mui/material/Box';
+import { Button, Grid } from '@material-ui/core';
+import Text from '../../atoms/text/index';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 const useStyles = makeStyles({
-  root: { width: "920px" },
-  parent: { display: "flex", justifyContent: "center" },
+  root: { width: '920px' },
+  parent: { display: 'flex', justifyContent: 'center' },
   currently: {
-    paddingTop: "60px",
-    paddingBottom: "60px",
-    position: "relative",
-    paddingleft: "0px",
+    paddingTop: '60px',
+    paddingBottom: '60px',
+    position: 'relative',
+    paddingleft: '0px',
   },
   buttonStyle: {
-    width: "284px",
+    width: '284px',
   },
   text: {
-    paddingLeft: "0px",
-    paddingTop: "50px",
+    paddingLeft: '0px',
+    paddingTop: '50px',
   },
   line: {
-    width: "304px",
-    height: "2px",
+    width: '304px',
+    height: '2px',
   },
 });
 type data = {
@@ -40,32 +40,32 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
   const classes = useStyles();
   const [currently, setCurrently] = useState(true);
   const [finished, setFinished] = useState(false);
-  let  style2;
+  let style2;
   if (currently) {
-    
     style2 = {
-      color: "#6D787E",
+      color: '#6D787E',
       fontWeight: 100,
     };
   } else {
     style2 = {
-      color: "#22C870",
+      color: '#22C870',
     };
   }
   const navigate = useNavigate();
-  const handleCLick=(d:any)=>{
-    console.log("hi")
-                            navigate("/enterpreuner/bookdetails", {
-                              state: d.id,
-                            });}
+  const handleCLick = (d: any) => {
+    console.log('hi');
+    navigate('/enterpreuner/bookdetails', {
+      state: d.id,
+    });
+  };
   return (
     <div className={classes.parent}>
       <div className={classes.root}>
         <div className={classes.text}>
           <Text
-            variant={"h1"}
-            text={"My Library"}
-            height={"36px"}
+            variant={'h1'}
+            text={'My Library'}
+            height={'36px'}
             color="#03314B"
           />
         </div>
@@ -77,15 +77,24 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               setCurrently(true);
               setFinished(false);
             }}
-          ><div style={{paddingLeft:"0px",paddingRight:"120px"}}>{currently?<Text
-            variant={"subtitle1Blue"}
-            text={"Currently Reading"}
-            height={"18px"}
-          />:<Text
-          variant={"subtitle1"}
-          text={"Currently Reading"}
-          height={"18px"}
-        />}</div>
+          >
+            <div
+              style={{ paddingLeft: '0px', paddingRight: '120px' }}
+            >
+              {currently ? (
+                <Text
+                  variant={'subtitle1Blue'}
+                  text={'Currently Reading'}
+                  height={'18px'}
+                />
+              ) : (
+                <Text
+                  variant={'subtitle1'}
+                  text={'Currently Reading'}
+                  height={'18px'}
+                />
+              )}
+            </div>
           </Button>
 
           <Button
@@ -96,18 +105,42 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               setFinished(true);
             }}
             style={style2}
-          >{finished?<Text variant={"subtitle1Blue"} text={"Finished "} height={"18px"} />:<Text variant={"subtitle1"} text={"Finished "} height={"18px"} />}
+          >
+            {finished ? (
+              <Text
+                variant={'subtitle1Blue'}
+                text={'Finished '}
+                height={'18px'}
+              />
+            ) : (
+              <Text
+                variant={'subtitle1'}
+                text={'Finished '}
+                height={'18px'}
+              />
+            )}
           </Button>
           <div className={classes.parent}>
             <hr
               className={classes.line}
-              style={currently ? { backgroundColor: "#2CE080" } : { backgroundColor: "#F1F6F4" }}
+              style={
+                currently
+                  ? { backgroundColor: '#2CE080' }
+                  : { backgroundColor: '#F1F6F4' }
+              }
             ></hr>
             <hr
               className={classes.line}
-              style={finished ? { backgroundColor: "#2CE080" } : { backgroundColor: "#F1F6F4" }}
+              style={
+                finished
+                  ? { backgroundColor: '#2CE080' }
+                  : { backgroundColor: '#F1F6F4' }
+              }
             ></hr>
-            <hr className={classes.line} style={{ color: "#F1F6F4" }}></hr>
+            <hr
+              className={classes.line}
+              style={{ color: '#F1F6F4' }}
+            ></hr>
           </div>
         </div>
         <Box sx={{ flexGrow: 1 }}>
@@ -126,9 +159,12 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                        <div onClick={()=>handleCLick(d)} data-testid="grid">
+                        <div
+                          onClick={() => handleCLick(d)}
+                          data-testid="grid"
+                        >
                           <BookCard
-                            mode={"normal"}
+                            mode={'normal'}
                             bookName={d.cardName}
                             authorName={d.authorName}
                             src={d.src}
@@ -152,9 +188,12 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                        <div onClick={ ()=>handleCLick(d)} data-testid="grid">
+                        <div
+                          onClick={() => handleCLick(d)}
+                          data-testid="grid"
+                        >
                           <BookCard
-                            mode={"read again"}
+                            mode={'read again'}
                             bookName={d.cardName}
                             authorName={d.authorName}
                             src={d.src}
@@ -177,10 +216,12 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                       key={d.id}
                       className={classes.root}
                     >
-                      <div onClick={()=> handleCLick(d)} data-testid="grid">
-                      
+                      <div
+                        onClick={() => handleCLick(d)}
+                        data-testid="grid"
+                      >
                         <BookCard
-                          mode={"finished"}
+                          mode={'finished'}
                           bookName={d.cardName}
                           authorName={d.authorName}
                           src={d.src}

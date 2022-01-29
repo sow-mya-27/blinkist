@@ -1,10 +1,10 @@
-import React from "react";
-import { ComponentStory } from "@storybook/react";
-import HeaderPopUp from ".";
-import { BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import { ComponentStory } from '@storybook/react';
+import HeaderPopUp from '.';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export default {
-  title: "organisms / HeaderPopUp",
+  title: 'organisms / HeaderPopUp',
   component: HeaderPopUp,
 };
 const Template: ComponentStory<typeof HeaderPopUp> = (args) => (

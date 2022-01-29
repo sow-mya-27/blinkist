@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/molecules/banner/index.test.tsx">
+    <testCase name="banner image" duration="235"/>
+    <testCase name="content" duration="36"/>
+    <testCase name="text" duration="27"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/molecules/BookDetail/index.test.tsx">
+    <testCase name="details" duration="122"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/atoms/icons/index.test.tsx">
+    <testCase name="renders icons" duration="62"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/header/index.test.tsx">
+    <testCase name="footer" duration="202"/>
+    <testCase name="explore" duration="608"/>
+    <testCase name="should have blinkistLogo" duration="51"/>
+    <testCase name="clicking blinkist logo should navigate to MyLibrary page" duration="77"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/atoms/images/index.test.tsx">
+    <testCase name="renders images" duration="68"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/templates/BookDetailTemplate/index.test.tsx">
+    <testCase name="bookdetial" duration="52"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/headerPopup/index.test.tsx">
+    <testCase name="should have Entrepreneurship button" duration="3149"/>
+    <testCase name="should navigate to MyLIbrary page" duration="2458"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/BookDetailOrganism/index.test.tsx">
+    <testCase name="should have read now button" duration="875"/>
+    <testCase name="read now should navigate to myLibrary" duration="486"/>
+    <testCase name="should have finished button" duration="424"/>
+    <testCase name="Finished Reading should navigate to myLibrary" duration="457"/>
+    <testCase name="should have send to kindle button" duration="497"/>
+    <testCase name="send to kindle should navigate to myLibrary" duration="472"/>
+    <testCase name="should have synopsis button" duration="466"/>
+    <testCase name="should have who button" duration="449"/>
+    <testCase name="should have about  button" duration="444"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/pages/BookDetailPage/index.test.tsx">
+    <testCase name="bookdetial" duration="434"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/atoms/text/index.test.tsx">
+    <testCase name="text" duration="51"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/footer/index.test.tsx">
+    <testCase name="footer" duration="164"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/molecules/bookCard/index.test.tsx">
+    <testCase name="bookImage" duration="200"/>
+    <testCase name="bookname" duration="41"/>
+    <testCase name="authorname" duration="39"/>
+    <testCase name="timeStamp" duration="135"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/EntrepreneurOrganism/index.test.tsx">
+    <testCase name="should have grid" duration="507"/>
+    <testCase name="grid should be navigated to bookdetails on click" duration="491"/>
+    <testCase name="should have input field" duration="145"/>
+    <testCase name="change of form input" duration="265"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/organisms/myLibrary/index.test.tsx">
+    <testCase name="card items" duration="527"/>
+    <testCase name="grid should be navigated to bookdetails on click" duration="456"/>
+    <testCase name="should navigate to MyLIbrary page" duration="533"/>
+    <testCase name="should navigate to  page" duration="480"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/pages/enterpreuner/index.test.tsx">
+    <testCase name="bookdetial" duration="415"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/components/pages/MyLibrary/index.test.tsx">
+    <testCase name="bookdetial" duration="269"/>
+  </file>
+  <file path="/home/sowmga/Desktop/zemoso-training/blinkist/blinkist/src/App.test.tsx">
+    <testCase name="renders learn react link" duration="3"/>
+  </file>
+</testExecutions>

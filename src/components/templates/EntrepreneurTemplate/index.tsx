@@ -1,24 +1,24 @@
-import { makeStyles } from "@mui/styles";
-import React from "react";
+import { makeStyles } from '@mui/styles';
+import React from 'react';
 
 const useStyles = makeStyles({
   root: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100vh",
-    width: "100vw",
-    position: "relative",
-    margin: "0",
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100vh',
+    width: '100vw',
+    position: 'relative',
+    margin: '0',
   },
   header: {
-    position: "absolute",
-    height: "86px",
-    width: "100%",
+    position: 'absolute',
+    height: '86px',
+    width: '100%',
   },
   body: {
-    marginTop: "86px",
-    height: "100%",
-    width: "100%",
+    marginTop: '86px',
+    height: '100%',
+    width: '100%',
   },
 });
 type MyProps = {

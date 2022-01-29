@@ -1,7 +1,7 @@
-import Footer from "../../organisms/footer";
-import Header from "../../organisms/header";
-import MyLibraryTemplate from "../../organisms/myLibrary";
-import HomePageTemplate from "../../templates/HomePage";
+import Footer from '../../organisms/footer';
+import Header from '../../organisms/header';
+import MyLibraryTemplate from '../../organisms/myLibrary';
+import HomePageTemplate from '../../templates/HomePage';
 
 type data = {
   src: string;

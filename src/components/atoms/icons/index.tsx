@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type MyProps = { src: string; height: string; width: string };
 const Icons = (props: MyProps) => {

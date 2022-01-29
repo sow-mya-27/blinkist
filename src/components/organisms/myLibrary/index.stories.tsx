@@ -1,10 +1,10 @@
-import React from "react";
-import { ComponentStory } from "@storybook/react";
-import MyLibraryTemplate from ".";
-import { BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import { ComponentStory } from '@storybook/react';
+import MyLibraryTemplate from '.';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export default {
-  title: "organisms / MyLibraryTemplate",
+  title: 'organisms / MyLibraryTemplate',
   component: MyLibraryTemplate,
 };
 

@@ -1,8 +1,8 @@
-import React from "react";
-import BookDetailOrganism from "../../organisms/BookDetailOrganism";
-import Footer from "../../organisms/footer";
-import Header from "../../organisms/header";
-import EntrepreneurTemplate from "../../templates/EntrepreneurTemplate";
+import React from 'react';
+import BookDetailOrganism from '../../organisms/BookDetailOrganism';
+import Footer from '../../organisms/footer';
+import Header from '../../organisms/header';
+import EntrepreneurTemplate from '../../templates/EntrepreneurTemplate';
 
 type data = {
   src: string;

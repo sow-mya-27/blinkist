@@ -1,23 +1,16 @@
-import React from "react";
-import { ComponentStory } from "@storybook/react";
-import BookDetailOrganism from ".";
-import { BrowserRouter as Router } from "react-router-dom";
-type data = {
-  src: string;
-  cardName: string;
-  authorName: string;
-  timeStamp: string;
-  id: number;
-  isread: boolean;
-  reads: string;
-  status: boolean;
-};
+import React from 'react';
+import { ComponentStory } from '@storybook/react';
+import BookDetailOrganism from '.';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 export default {
-  title: "organisms / BookDetailOrganism",
+  title: 'organisms / BookDetailOrganism',
   component: BookDetailOrganism,
 };
 
-const template: ComponentStory<typeof BookDetailOrganism> = (args) => (
+const template: ComponentStory<typeof BookDetailOrganism> = (
+  args,
+) => (
   <Router>
     <BookDetailOrganism {...args} />
   </Router>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 type MyProps = {
   src: string;
   height: number;
@@ -9,6 +9,8 @@ const Image = (props: MyProps) => {
     height: props.height,
     width: props.width,
   };
-  return <img src={props.src} style={styles} alt="blinkist logo"></img>;
+  return (
+    <img src={props.src} style={styles} alt="blinkist logo"></img>
+  );
 };
 export default Image;

@@ -1,58 +1,59 @@
-import { Button } from "@material-ui/core";
-import { makeStyles } from "@mui/styles";
-import { useLocation,useNavigate } from "react-router-dom";
-import Details from "../../molecules/BookDetail";
-import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-import { useState } from "react";
-import Text from "../../atoms/text";
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Details from '../../molecules/BookDetail';
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import { useState } from 'react';
+import Text from '../../atoms/text';
 
 const useStyles = makeStyles({
   flexDiv: {
-    width: "920px",
-    display: "flex",
-    flexDirection: "column",
+    width: '920px',
+    display: 'flex',
+    flexDirection: 'column',
   },
   root: {
-    display: "flex",
-    justifyContent: "center",
+    display: 'flex',
+    justifyContent: 'center',
   },
 
   buttonStyle: {
-    width: "200px",
-    textAlign: "left",
-    fontFamily: "Cera Pro, sans-serif",
-  fontStyle: "normal",
-  fontWeight: "normal",
-  fontSize: "16px",
-  lineHeight: "20px",
-  color: "#6d787e",
-  marginTop: "14px",
-  textTransform:"capitalize"
+    width: '200px',
+    textAlign: 'left',
+    fontFamily: 'Cera Pro, sans-serif',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: '16px',
+    lineHeight: '20px',
+    color: '#6d787e',
+    marginTop: '14px',
+    textTransform: 'capitalize',
   },
   buttonStyle2: {
-    width: "200px",
-    height: "44px",
-    margin: "5px",
-    borderRadius: "5px",
-    fontSize: "14px",
-    "&:hover": {
-       color: "white",
-       backgroundColor: "#22C870"}
+    width: '200px',
+    height: '44px',
+    margin: '5px',
+    borderRadius: '5px',
+    fontSize: '14px',
+    '&:hover': {
+      color: 'white',
+      backgroundColor: '#22C870',
+    },
   },
   finishedButton: {
-    width: "170px",
-    textAlign: "left",
-    height: "44px",
-    "&.MuiButton-text": { backgroundColor: "#22C870" },
+    width: '170px',
+    textAlign: 'left',
+    height: '44px',
+    '&.MuiButton-text': { backgroundColor: '#22C870' },
   },
   text: {
-    paddingTop: "80px",
-    paddingBottom: "25px",
+    paddingTop: '80px',
+    paddingBottom: '25px',
     fontWeight: 700,
   },
   search: {
-    width: "658px",
-    paddingTop: "61px",
+    width: '658px',
+    paddingTop: '61px',
   },
 });
 type data = {
@@ -65,7 +66,10 @@ type data = {
   reads: string;
   status: boolean;
 };
-const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
+const BookDetailOrganism = (props: {
+  book: data[];
+  setData: any;
+}) => {
   const navigate = useNavigate();
   const location = useLocation();
   const loc = location.state;
@@ -80,19 +84,19 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
     });
 
   const classes = useStyles();
-  let src1 = "",
-    bookName = "",
-    authorName = "",
-    timeStamp = "";
+  let src1 = '',
+    bookName = '',
+    authorName = '',
+    timeStamp = '';
 
   if (props.book[id]) {
-    src1 = props.book[id].src 
+    src1 = props.book[id].src;
     bookName = props.book[id].cardName;
     authorName = props.book[id].authorName;
     timeStamp = props.book[id].timeStamp;
   }
-  console.log(bookName)
-  const [button, setButton] = useState("synopsis");
+  console.log(bookName);
+  const [button, setButton] = useState('synopsis');
   const handleFinish = () => {
     props.book[id].status = false;
   };
@@ -100,163 +104,165 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
     props.book[id].status = true;
   };
   return (
-    
     <div className={classes.root}>
       <div className={classes.flexDiv}>
-        
-        {src1 && <Details
-          book={props.book}
-          setData={props.setData}
-          src={src1}
-          bookName={bookName}
-          authorName={authorName}
-          timeStamp={timeStamp}
-        ></Details>}
+        {src1 && (
+          <Details
+            book={props.book}
+            setData={props.setData}
+            src={src1}
+            bookName={bookName}
+            authorName={authorName}
+            timeStamp={timeStamp}
+          ></Details>
+        )}
         <div>
           <div>
-          <Button className={classes.buttonStyle2}
+            <Button
+              className={classes.buttonStyle2}
               variant="outlined"
-              
-            onClick={handleRead}>
+              onClick={handleRead}
+            >
               Read Now
             </Button>
-            
+
             <Button
               className={classes.finishedButton}
               variant="text"
               onClick={handleFinish}
-            >Finished Reading
-              
+            >
+              Finished Reading
             </Button>
             <Button
               className={classes.buttonStyle2}
               variant="text"
               endIcon={<ArrowForwardOutlinedIcon />}
-              onClick={() => navigate("/")}
-            >Send to Kindle
+              onClick={() => navigate('/')}
+            >
+              Send to Kindle
             </Button>
           </div>
-          <div style={{ paddingTop: "72px" }}>
+          <div style={{ paddingTop: '72px' }}>
             <Button
               className={classes.buttonStyle}
               variant="text"
               onClick={() => {
-                setButton("synopsis");
+                setButton('synopsis');
               }}
-            >Synopsis
-              
+            >
+              Synopsis
             </Button>
             <Button
               className={classes.buttonStyle}
               variant="text"
               onClick={() => {
-                setButton("who");
+                setButton('who');
               }}
-            >Who is it for?
-           
+            >
+              Who is it for?
             </Button>
             <Button
               className={classes.buttonStyle}
               variant="text"
               onClick={() => {
-                setButton("about");
+                setButton('about');
               }}
-            >About the author
-              
+            >
+              About the author
             </Button>
           </div>
           <div
             style={{
-              display: "flex",
-              justifyContent: "center",
-              width: "600px",
+              display: 'flex',
+              justifyContent: 'center',
+              width: '600px',
             }}
           >
-            {button === "synopsis" ? (
+            {button === 'synopsis' ? (
               <hr
                 style={{
-                  width: "200px",
-                  height: "2px",
-                  backgroundColor: "#2CE080",
+                  width: '200px',
+                  height: '2px',
+                  backgroundColor: '#2CE080',
                 }}
               ></hr>
             ) : (
               <hr
                 style={{
-                  width: "200px",
-                  height: "2px",
-                  backgroundColor: "#E1ECFC",
+                  width: '200px',
+                  height: '2px',
+                  backgroundColor: '#E1ECFC',
                 }}
               ></hr>
             )}
-            {button === "who" ? (
+            {button === 'who' ? (
               <hr
                 style={{
-                  width: "200px",
-                  height: "2px",
-                  backgroundColor: "#2CE080",
+                  width: '200px',
+                  height: '2px',
+                  backgroundColor: '#2CE080',
                 }}
               ></hr>
             ) : (
               <hr
                 style={{
-                  width: "200px",
-                  height: "2px",
-                  backgroundColor: "#E1ECFC",
+                  width: '200px',
+                  height: '2px',
+                  backgroundColor: '#E1ECFC',
                 }}
               ></hr>
             )}
-            {button === "about" ? (
+            {button === 'about' ? (
               <hr
                 style={{
-                  width: "200px",
-                  height: "2px",
-                  backgroundColor: "#2CE080",
+                  width: '200px',
+                  height: '2px',
+                  backgroundColor: '#2CE080',
                 }}
               ></hr>
             ) : (
               <hr
                 style={{
-                  width: "200px",
-                  height: "2px",
-                  backgroundColor: "#E1ECFC",
+                  width: '200px',
+                  height: '2px',
+                  backgroundColor: '#E1ECFC',
                 }}
               ></hr>
             )}
           </div>
-          <div style={{ paddingBottom: "257px" }}>
-            {button === "synopsis" ? (
+          <div style={{ paddingBottom: '257px' }}>
+            {button === 'synopsis' ? (
               <Text
-                variant={"body1"}
+                variant={'body1'}
                 text={
                   bookName +
-                  "(2020) updates " +
+                  '(2020) updates ' +
                   authorName +
-                  "’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world."
+                  '’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.'
                 }
-                height={"16px"}
+                height={'16px'}
                 width="600px"
                 color="#03314B"
               ></Text>
             ) : (
               <></>
             )}
-            {button === "who" ? (
+            {button === 'who' ? (
               <Text
-                variant={"body1"}
+                variant={'body1'}
                 text="any one who are interested in Entrepreneurship"
-                height={"16px"}
+                height={'16px'}
                 width="600px"
                 color="#03314B"
               ></Text>
             ) : (
               <></>
             )}
-            {button === "about" ? (
+            {button === 'about' ? (
               <Text
-                variant={"body1"}
+                variant={'body1'}
                 text={authorName}
-                height={"16px"}
+                height={'16px'}
                 width="600px"
                 color="#03314B"
               ></Text>
@@ -266,7 +272,6 @@ const BookDetailOrganism = (props: { book: data[]; setData: any }) => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

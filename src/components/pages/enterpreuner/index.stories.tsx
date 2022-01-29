@@ -1,10 +1,10 @@
-import React from "react";
-import { ComponentStory } from "@storybook/react";
-import Entrepreneurship from ".";
-import { BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import { ComponentStory } from '@storybook/react';
+import Entrepreneurship from '.';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export default {
-  title: "pages / enterpreuner",
+  title: 'pages / enterpreuner',
   component: Entrepreneurship,
 };
 const Template: ComponentStory<typeof Entrepreneurship> = (args) => (

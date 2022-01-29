@@ -13,7 +13,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  width: "501px";
+  width: '501px';
   /* color:"red"; */
   color: #353430;
   display: block;
@@ -46,7 +46,7 @@
   font-size: 18px;
   line-height: 24px;
   color: #116be9;
-  padding-top: "10px";
+  padding-top: '10px';
   display: block;
   text-transform: capitalize;
 }
