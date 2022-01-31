@@ -7,7 +7,6 @@ const ReadAgain = () => {
       width: '284px',
       textAlign: 'center',
       paddingTop: '16px',
-      // height: "52px",
     },
     flex: { display: 'flex', width: '283px', paddingTop: '16px' },
     first: {

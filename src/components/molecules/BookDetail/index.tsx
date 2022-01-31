@@ -6,7 +6,6 @@ const useStyles = makeStyles({
   text: {
     display: 'flex',
     flexDirection: 'column',
-    // backgroundColor: "red",
     height: '280px',
     width: '520px',
   },
@@ -24,7 +23,6 @@ const Details = (props: {
   authorName: string;
   timeStamp: string;
 }) => {
-  console.log(props.src);
   const [, src2] = props.src.split('/');
   const [src3] = src2.split('.');
   const classes = useStyles();

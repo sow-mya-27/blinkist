@@ -3,10 +3,10 @@ import Image from '../../atoms/images';
 import SearchIcon from '@mui/icons-material/Search';
 import Text from '../../atoms/text';
 import Icons from '../../atoms/icons';
-import { Fab } from '@material-ui/core';
 import { makeStyles } from '@mui/styles';
 import HeaderPopUp from '../headerPopup/index';
 import { useNavigate } from 'react-router-dom';
+import AccountMenu from '../Accounts/index';
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -94,7 +94,10 @@ const Header = () => {
                 />
                 <div>{click ? icondown : iconup}</div>
               </div>
-              <div style={{ paddingBottom: '10px' }}>
+              <div
+                style={{ paddingBottom: '10px' }}
+                onClick={() => navigate('/')}
+              >
                 <Text
                   variant={'body1black'}
                   text={'My Library'}
@@ -103,18 +106,7 @@ const Header = () => {
                 />
               </div>
             </div>
-            <div>
-              <Fab size="small" color="primary">
-                <div style={{ color: 'white' }}>A</div>
-              </Fab>
-              <Icons
-                src={
-                  'https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png'
-                }
-                height={'13px'}
-                width={'12px'}
-              ></Icons>
-            </div>
+            <AccountMenu></AccountMenu>
           </div>
         </div>
       </div>

@@ -11,8 +11,6 @@ const Normal = () => {
       justifyContent: 'space-between',
       height: '52px',
       width: '284px',
-      // backgroundColor:"red"
-      // marginBottom: "50px",
     },
     flex: { display: 'flex' },
     first: {

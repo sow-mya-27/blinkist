@@ -20,8 +20,3 @@ bookDetailOrganism.args = {
   book: [],
   setData: { undefined },
 };
-// export const bookDetailOrganism = (
-
-// <Router>
-//   <BookDetailOrganism book={[]} setData={undefined} />
-// </Router>

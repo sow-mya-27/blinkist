@@ -53,7 +53,6 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
   }
   const navigate = useNavigate();
   const handleCLick = (d: any) => {
-    console.log('hi');
     navigate('/enterpreuner/bookdetails', {
       state: d.id,
     });

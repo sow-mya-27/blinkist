@@ -95,7 +95,6 @@ const BookDetailOrganism = (props: {
     authorName = props.book[id].authorName;
     timeStamp = props.book[id].timeStamp;
   }
-  console.log(bookName);
   const [button, setButton] = useState('synopsis');
   const handleFinish = () => {
     props.book[id].status = false;

@@ -37,7 +37,6 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value.toLowerCase();
     setInput(val);
-    console.log(input);
   };
   const clickHandler = (d: any) => {
     navigate('/enterpreuner/bookdetails', { state: d.id });
@@ -183,7 +182,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
           </div>
         ) : (
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} data-testid="grid1">
               {props.book &&
                 props.book
                   .filter(

@@ -44,6 +44,19 @@ const data = [
     just: false,
     audio: true,
   },
+  {
+    src: 'assets/doesntHurt.png',
+    cardName: 'hello alll',
+    authorName: 'Trey Gowdy',
+    timeStamp: '13-minute read',
+    id: 1,
+    isread: true,
+    reads: '1.9k reads',
+    status: true,
+    startedBook: false,
+    just: false,
+    audio: false,
+  },
 ];
 
 const renderFunction = () => {

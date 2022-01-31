@@ -20,6 +20,16 @@ it('explore', () => {
   fireEvent.click(explore);
 });
 
+it('myLIbrary', () => {
+  render(
+    <BrowserRouter>
+      <Header></Header>
+    </BrowserRouter>,
+  );
+  const explore = screen.getByText('My Library');
+  fireEvent.click(explore);
+});
+
 it('should have blinkistLogo', () => {
   render(
     <BrowserRouter>
