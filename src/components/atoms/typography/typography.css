@@ -48,7 +48,7 @@
   color: #116be9;
   padding-top: '10px';
   display: block;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .body1 {
   font-family: Cera Pro, sans-serif;
@@ -57,6 +57,17 @@
   font-size: 16px;
   line-height: 20px;
   color: #6d787e;
+  display: block;
+  margin-top: 14px;
+  text-transform: capitalize;
+}
+.body1blue {
+  font-family: Cera Pro, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #116be9;
   display: block;
   margin-top: 14px;
   text-transform: capitalize;

@@ -3,20 +3,12 @@ import React from 'react';
 import Text from '../../atoms/text';
 import RocketOutlinedIcon from '@mui/icons-material/RocketOutlined';
 import Button from '@mui/material/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ScienceOutlinedIcon from '@mui/icons-material/ScienceOutlined';
 import { useNavigate } from 'react-router-dom';
-import {
-  faGlobe,
-  faMonument,
-  faHourglassEnd,
-  faBullseye,
-  faChartLine,
-  faLandmark,
-  faHospital,
-  faCommentAlt,
-  faLeaf,
-} from '@fortawesome/free-solid-svg-icons';
+import PublicIcon from '@mui/icons-material/Public';
+import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import ShowChartIcon from '@mui/icons-material/ShowChart';
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
@@ -24,6 +16,13 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import SignalCellularAltOutlinedIcon from '@mui/icons-material/SignalCellularAltOutlined';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import SpaOutlinedIcon from '@mui/icons-material/SpaOutlined';
+import {
+  AdjustOutlined,
+  HourglassBottom,
+  LocalHospitalOutlined,
+  TempleBuddhistOutlined,
+} from '@mui/icons-material';
 const HeaderPopUp = () => {
   const navigate = useNavigate();
   const useStyles = makeStyles({
@@ -64,7 +63,7 @@ const HeaderPopUp = () => {
       <div className={classes.root}>
         <div className={classes.flex}>
           <Text
-            variant={'subtitle3Blue'}
+            variant={'body1blue'}
             text={'Explore by category'}
             height={'16px'}
             width="188px"
@@ -98,16 +97,24 @@ const HeaderPopUp = () => {
               className={classes.button}
               variant="text"
               startIcon={
-                <RocketOutlinedIcon sx={{ color: '#0365F2' }} />
+                <RocketOutlinedIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
               onClick={() => navigate('/enterpreuner')}
             >
-              Entrepreneurship
+              <Text
+                variant={'body1'}
+                text={'Entrepreneurship'}
+                height={''}
+              />{' '}
             </Button>
             <Button
               variant="text"
               startIcon={
-                <ScienceOutlinedIcon sx={{ color: '#6D787E' }} />
+                <ScienceOutlinedIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text variant={'body1'} text={'Science'} height={''} />
@@ -115,7 +122,9 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon icon={faGlobe} color="#6D787E" />
+                <PublicIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text
@@ -128,7 +137,7 @@ const HeaderPopUp = () => {
               variant="text"
               startIcon={
                 <BusinessCenterOutlinedIcon
-                  sx={{ color: '#6D787E' }}
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -143,7 +152,7 @@ const HeaderPopUp = () => {
               startIcon={
                 <PsychologyOutlinedIcon
                   fontSize="large"
-                  sx={{ color: '#6D787E' }}
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -156,10 +165,8 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon
-                  icon={faLeaf}
-                  color="#6D787E"
-                  size="2x"
+                <SpaOutlinedIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -174,7 +181,9 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon icon={faLandmark} color="#6D787E" />
+                <AccountBalanceWalletOutlinedIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text variant={'body1'} text={'Politics'} height={''} />
@@ -182,7 +191,9 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon icon={faHospital} color="#6D787E" />
+                <LocalHospitalOutlined
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text
@@ -194,7 +205,9 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon icon={faMonument} color="#6D787E" />
+                <TempleBuddhistOutlined
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text variant={'body1'} text={'History'} height={''} />
@@ -202,7 +215,9 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <EmojiObjectsOutlinedIcon sx={{ color: '#6D787E' }} />
+                <EmojiObjectsOutlinedIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text
@@ -214,9 +229,8 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon
-                  icon={faHourglassEnd}
-                  color="#6D787E"
+                <HourglassBottom
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -229,10 +243,8 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon
-                  icon={faBullseye}
-                  color="#6D787E"
-                  size="2x"
+                <AdjustOutlined
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -248,7 +260,9 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon icon={faChartLine} color="#6D787E" />
+                <ShowChartIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text
@@ -261,7 +275,7 @@ const HeaderPopUp = () => {
               variant="text"
               startIcon={
                 <SignalCellularAltOutlinedIcon
-                  sx={{ color: '#6D787E' }}
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -274,9 +288,8 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <FontAwesomeIcon
-                  icon={faCommentAlt}
-                  color="#6D787E"
+                <ChatBubbleIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -290,7 +303,7 @@ const HeaderPopUp = () => {
               variant="text"
               startIcon={
                 <AccountBalanceWalletOutlinedIcon
-                  sx={{ color: '#6D787E' }}
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -304,7 +317,7 @@ const HeaderPopUp = () => {
               variant="text"
               startIcon={
                 <FavoriteBorderOutlinedIcon
-                  sx={{ color: '#6D787E' }}
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
                 />
               }
             >
@@ -317,7 +330,9 @@ const HeaderPopUp = () => {
             <Button
               variant="text"
               startIcon={
-                <SchoolOutlinedIcon sx={{ color: '#6D787E' }} />
+                <SchoolOutlinedIcon
+                  sx={{ color: '#6D787E', marginTop: '10px' }}
+                />
               }
             >
               <Text

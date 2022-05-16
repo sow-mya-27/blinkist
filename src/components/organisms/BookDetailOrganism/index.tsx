@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     textTransform: 'capitalize',
   },
   buttonStyle2: {
-    width: '200px',
+    width: '180px',
     height: '44px',
     margin: '5px',
     borderRadius: '5px',
@@ -98,9 +98,11 @@ const BookDetailOrganism = (props: {
   const [button, setButton] = useState('synopsis');
   const handleFinish = () => {
     props.book[id].status = false;
+    navigate('/');
   };
   const handleRead = () => {
     props.book[id].status = true;
+    navigate('/');
   };
   const hrFunction = (color: string) => {
     return (

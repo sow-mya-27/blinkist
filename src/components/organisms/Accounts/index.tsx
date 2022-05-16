@@ -37,18 +37,20 @@ export default function AccountMenu() {
   const { user, isAuthenticated, logout } = useAuth0();
   return (
     <React.Fragment>
-      {console.log(
+      {/* {console.log(
         user?.email,
         user?.email_verified,
         user?.sub,
         user?.isAuthenticated,
-      )}
+      )} */}
       {isAuthenticated ? (
         <div data-testid="image">
           <div className={classes.circular} onClick={handleClick}>
             <img
               className={classes.image}
-              src={user?.picture}
+              src={
+                'https://assets2.lottiefiles.com/avatars/300_5d0cbde9b357d.jpg'
+              }
               alt={'profile'}
             />
           </div>

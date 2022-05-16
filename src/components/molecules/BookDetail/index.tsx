@@ -59,7 +59,7 @@ const Details = (props: {
         <div style={{ paddingBottom: '19px' }}>
           <Text
             variant={'body1'}
-            text={props.authorName}
+            text={'By ' + props.authorName}
             height={'15px'}
             color="#6D787E"
             width="520px"
@@ -73,7 +73,7 @@ const Details = (props: {
         ></Text>
       </div>
 
-      <div style={{ paddingTop: '40px' }}>
+      <div style={{ paddingTop: '40px', marginLeft: '90px' }}>
         <Image
           src={`/assets/${src3}.png`}
           height={304}
